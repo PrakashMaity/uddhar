@@ -1,10 +1,12 @@
 import { StyleSheet, Text, View } from 'react-native'
 import React from 'react'
+import { styleConst } from '../style/root'
 
 const Home = () => {
   return (
     <View>
-      <Text>Home</Text>
+      <Text style={{fontFamily:styleConst.FONT_FAMILY.PRIMARY}}>Home</Text>
+      <Text style={{}}>Home</Text>
     </View>
   )
 }
