@@ -1,3 +1,5 @@
+import { responsiveHeight } from "../utils/ResponsiveUI";
+
 export const styleConst={
     COLOR:{
         LIGHT:{
@@ -43,7 +45,28 @@ export const styleConst={
             BLUE_100:'#0077FF',
         }
     },
+    FONT_SIZE:{
+        TITLE_X:responsiveHeight(64),
+        TITLE_1:responsiveHeight(32),
+        TITLE_2:responsiveHeight(24),
+        TITLE_3:responsiveHeight(18),
+        REGULAR_1:responsiveHeight(16),
+        REGULAR_2:responsiveHeight(16),
+        REGULAR_3:responsiveHeight(14),
+        SMALL:responsiveHeight(13),
+        TINY:responsiveHeight(12)
+    },
     FONT_FAMILY:{
-        PRIMARY:'Inter-Regular'
-    } 
+        PRIMARY:'Inter-Regular',
+        INTER_SEMIBOLD:'Inter-SemiBold',
+        INTER_BOLD:'Inter-Bold',
+    },
+    PADDING:{
+        PADDING_HORIZONTAL:responsiveHeight(10),
+        PADDING_VERTICAL:responsiveHeight(10)
+    },
+    MARGIN:{
+        MARGIN_HORIZONTAL:responsiveHeight(5),
+        MARGIN_VERTICAL:responsiveHeight(10)
+    }
 }

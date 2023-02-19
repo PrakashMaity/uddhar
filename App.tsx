@@ -1,15 +1,16 @@
 import {StyleSheet, Text, View} from 'react-native';
 import React from 'react';
-import Home from './pages/Home';
-import { NavigationContainer } from '@react-navigation/native';
+import {NavigationContainer} from '@react-navigation/native';
+import {NativeBaseProvider} from 'native-base';
+import Home from './pages/logical/Home.page';
 
 const App = () => {
   return (
-    <NavigationContainer>
-      <View>
+    <NativeBaseProvider>
+      <NavigationContainer>
         <Home />
-      </View>
-    </NavigationContainer>
+      </NavigationContainer>
+    </NativeBaseProvider>
   );
 };
 
