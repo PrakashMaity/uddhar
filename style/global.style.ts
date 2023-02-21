@@ -4,7 +4,7 @@ import { styleConst } from "./root.style";
 export const globalStyle=StyleSheet.create({
     mainContainer:{
         flex:1,
-        // margin:styleConst.MARGIN.MARGIN_HORIZONTAL,
-        padding:20
+        marginHorizontal:styleConst.MARGIN.MARGIN_HORIZONTAL,
+        // padding:20
     }
 })
