@@ -4,15 +4,17 @@ import { styleConst } from '../../../style/root.style'
 import { responsiveHeight, responsiveWidth } from '../../../utils/ResponsiveUI'
 import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
 import { TouchableOpacity } from 'react-native';
+// npm i --save-dev @types/react-native-vector-icons
+interface ButtonInterface{
+  title?: string;
+  plusIcon?: boolean;
+  style?: object;
+  onPress?:() =>void;
+  buttonColor?: string;
+  buttonTextColor?: string;
+}
 
-export default function Button({ title, plusIcon, style, onPress, buttonColor, buttonTextColor }: {
-  title: string;
-  plusIcon: boolean;
-  style: object;
-  onPress: void;
-  buttonColor: string;
-  buttonTextColor: string;
-}) {
+export default function Button({ title, plusIcon, style, onPress, buttonColor, buttonTextColor }:ButtonInterface) {
   const styles = StyleSheet.create({
     customButton: {
       backgroundColor: buttonColor == undefined ? styleConst.COLOR.VIOLET.VIOLET_100 : buttonColor,
