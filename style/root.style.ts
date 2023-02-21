@@ -1,4 +1,4 @@
-import { responsiveHeight } from "../utils/ResponsiveUI";
+import { responsiveHeight, responsiveWidth } from "../utils/ResponsiveUI";
 
 export const styleConst={
     COLOR:{
@@ -62,11 +62,11 @@ export const styleConst={
         INTER_BOLD:'Inter-Bold',
     },
     PADDING:{
-        PADDING_HORIZONTAL:responsiveHeight(10),
+        PADDING_HORIZONTAL:responsiveWidth(10),
         PADDING_VERTICAL:responsiveHeight(10)
     },
     MARGIN:{
-        MARGIN_HORIZONTAL:responsiveHeight(5),
+        MARGIN_HORIZONTAL:responsiveWidth(15),
         MARGIN_VERTICAL:responsiveHeight(10)
     }
 }
