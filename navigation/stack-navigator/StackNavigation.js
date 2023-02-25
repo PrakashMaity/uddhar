@@ -4,7 +4,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import SplashScreen from "../../pages/auth/Intro/SplashScreen.tsx"
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 const Stack = createNativeStackNavigator();
-export default function StackNavi() {
+export default function StackNavigation() {
   return (
     <NavigationContainer>
       <Stack.Navigator 
