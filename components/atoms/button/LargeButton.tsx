@@ -14,7 +14,7 @@ interface ButtonInterface{
   buttonTextColor?: string;
 }
 
-export default function Button({ title, plusIcon, style, onPress, buttonColor, buttonTextColor }:ButtonInterface) {
+export default function LargeButton({ title, plusIcon, style, onPress, buttonColor, buttonTextColor }:ButtonInterface) {
   const styles = StyleSheet.create({
     customButton: {
       backgroundColor: buttonColor == undefined ? styleConst.COLOR.VIOLET.VIOLET_100 : buttonColor,
@@ -35,7 +35,7 @@ export default function Button({ title, plusIcon, style, onPress, buttonColor, b
       width: responsiveHeight(22),
       borderWidth: responsiveHeight(2.5),
       marginRight: responsiveHeight(6),
-      borderColor: buttonTextColor == undefined ? styleConst.COLOR.LIGHT.LIGHT_80 : buttonTextColor,
+      borderColor: buttonTextColor == undefined ?styleConst.COLOR.LIGHT.LIGHT_80 : buttonTextColor,
       borderRadius: responsiveHeight(6),
       justifyContent: "center",
       alignItems: "center"

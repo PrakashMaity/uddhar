@@ -4,13 +4,15 @@ import { styleConst } from '../../../style/root.style'
 import { responsiveHeight, responsiveWidth } from '../../../utils/ResponsiveUI'
 import { TouchableOpacity } from 'react-native';
 
-export default function SmallButton({ title, style, onPress, buttonColor, buttonTextColor }: {
-  title: string;
-  style: object;
-  onPress: void;
-  buttonColor: string;
-  buttonTextColor: string;
-}) {
+interface button{
+  title?: string;
+  style?: object;
+  onPress?:()=> void;
+  buttonColor?: string;
+  buttonTextColor?: string;
+}
+
+export default function SmallButton({ title, style, onPress, buttonColor, buttonTextColor }:button ) {
   const styles = StyleSheet.create({
     customButton: {
       backgroundColor: buttonColor == undefined ? styleConst.COLOR.VIOLET.VIOLET_100 : buttonColor,

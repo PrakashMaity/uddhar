@@ -4,9 +4,11 @@ import { responsiveHeight, responsiveWidth } from '../../../utils/ResponsiveUI'
 import AntDesign from 'react-native-vector-icons/AntDesign';
 import Entypo from 'react-native-vector-icons/Entypo';
 
-type Props = {}
-// const SimpleHeader = (props: Props) => {
-const SimpleHeader = ({back,threeDot,title}) => {
+interface header {
+    back?:boolean,
+    threeDot?:boolean,
+    title?:string}
+const SimpleHeader = ({back,threeDot,title}:header) => {
     return (
         <View style={{
             height: responsiveHeight(55),
