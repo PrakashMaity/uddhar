@@ -4,11 +4,12 @@ import { styleConst } from '../../../style/root.style'
 import { responsiveHeight, responsiveWidth } from '../../../utils/ResponsiveUI'
 import { Image } from 'react-native'
 import { images } from '../../../../assets/images.global'
+import { useNavigation } from '@react-navigation/native'
 export default function SplashScreen() {
-
-  function greet() {
-    console.log('Hello world');
-}
+  const navigation = useNavigation()
+  const greet = () => {
+    navigation.navigate("IntroScreen")
+  }
   useEffect(() => {
     setTimeout(greet, 3000);
   }, [])
