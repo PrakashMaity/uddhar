@@ -3,13 +3,13 @@ import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { NativeBaseProvider } from 'native-base';
 import { styleConst } from './src/style/root.style';
-import StackNavi from './src/navigation/stack-navigator/StackNavi';
+import StackNavigation from './src/navigation/stack-navigator/StackNavigation';
 
 const App = () => {
   return (
     // <NativeBaseProvider>
     // <StatusBar barStyle={"light-content"} backgroundColor={styleConst.COLOR.VIOLET.VIOLET_100} />
-    <StackNavi />
+    <StackNavigation />
     // <NativeBaseProvider />
   )
 };
