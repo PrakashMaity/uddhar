@@ -8,10 +8,10 @@ import { useNavigation } from '@react-navigation/native'
 export default function SplashScreen() {
   const navigation = useNavigation()
   const greet = () => {
-    navigation.navigate("IntroScreen")
+    navigation.replace("IntroScreen")
   }
   useEffect(() => {
-    setTimeout(greet, 3000);
+    setTimeout(greet, 1500);
   }, [])
 
   return (
