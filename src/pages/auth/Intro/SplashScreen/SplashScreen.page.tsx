@@ -1,12 +1,12 @@
 import { View, Text } from 'react-native'
 import React, { useEffect } from 'react'
-import { styleConst } from '../../../style/root.style'
-import { responsiveHeight, responsiveWidth } from '../../../utils/ResponsiveUI'
+import { styleConst } from '../../../../style/root.style'
+import { responsiveHeight, responsiveWidth } from '../../../../utils/ResponsiveUI'
 import { Image } from 'react-native'
-import { images } from '../../../../assets/images.global'
+import { images } from '../../../../constant/images.global'
 import { useNavigation } from '@react-navigation/native'
 export default function SplashScreen() {
-  const navigation = useNavigation()
+  const navigation:any = useNavigation()
   const greet = () => {
     navigation.replace("IntroScreen")
   }
