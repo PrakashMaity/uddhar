@@ -1,0 +1,11 @@
+{
+    "translation": {
+      "hello":"Hello",
+      "this line is translated":"This line is translated",
+      "INTRO_SLIDER":{
+        "INTRO_SLIDER_1":"Gain total control\nof your money",
+        "INTRO_SLIDER_2":"Gain total control\nof your money",
+        "INTRO_SLIDER_3":"Gain total control\nof your money"
+      }
+    }
+  }
