@@ -1,4 +1,4 @@
-import { images } from "../../../../../constant/images.global";
+import { images } from "../../../../../constant/images.contant";
 
 export const sliderData = [
     {

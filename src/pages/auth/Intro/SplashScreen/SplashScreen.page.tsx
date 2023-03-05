@@ -3,7 +3,7 @@ import React, { useEffect } from 'react'
 import { styleConst } from '../../../../style/root.style'
 import { responsiveHeight, responsiveWidth } from '../../../../utils/ResponsiveUI'
 import { Image } from 'react-native'
-import { images } from '../../../../constant/images.global'
+import { images } from '../../../../constant/images.contant'
 import { useNavigation } from '@react-navigation/native'
 export default function SplashScreen() {
   const navigation:any = useNavigation()
