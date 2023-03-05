@@ -9,6 +9,12 @@ export const styleConst={
             LIGHT_80:'#FBFBFB',
             LIGHT_100:'#E3E5E5'
         },
+        DARK:{
+            LIGHT_25:'#7A7E80',
+            LIGHT_50:'#464A4D',
+            LIGHT_75:'#161719',
+            LIGHT_100:'#0D0E0F'
+        },
         VIOLET:{
             VIOLET_20:'#EEE5FF',
             VIOLET_40:'#D3BDFF',
