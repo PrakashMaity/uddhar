@@ -6,8 +6,11 @@ import { responsiveHeight, responsiveWidth } from '../../../utils/ResponsiveUI'
 import { styleConst } from '../../../style/root.style'
 import { images } from '../../../../assets/images.global'
 const { width } = Dimensions.get("window")
+import {useTranslation} from 'react-i18next';
+
 export default function IntroScreen() {
     const navigation = useNavigation()
+    const {t, i18n} = useTranslation();
 
     const [activePage, setActivePage] = useState(0)
 
@@ -51,7 +54,7 @@ export default function IntroScreen() {
                                 <View style={{ height: responsiveWidth(312), width: responsiveWidth(312), justifyContent: "center", alignItems: "center" }} >
                                     <Image source={item.image} style={{ height: "90%", width: "90%", resizeMode: "contain" }} />
                                 </View>
-                                <Text style={{ fontSize: responsiveHeight(35), fontFamily: styleConst.FONT_FAMILY.INTER_BOLD, marginTop: responsiveHeight(41), textAlign: 'center', color: "#212325" }} >{item.title}</Text>
+                                <Text style={{ fontSize: responsiveHeight(35), fontFamily: styleConst.FONT_FAMILY.INTER_BOLD, marginTop: responsiveHeight(41), textAlign: 'center', color: "#212325" }} >{t('hello')}</Text>
                                 <Text style={{ marginTop: responsiveHeight(14), fontSize: responsiveHeight(23), fontFamily: styleConst.FONT_FAMILY.PRIMARY, paddingHorizontal: responsiveWidth(20), textAlign: "center" }} >{item.description}</Text>
                             </View>
                         )

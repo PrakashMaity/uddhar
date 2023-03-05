@@ -4,7 +4,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import { NativeBaseProvider } from 'native-base';
 import { styleConst } from './src/style/root.style';
 import StackNavigation from './src/navigation/stack-navigator/StackNavigation';
-
+import './assets/i18n/i18n.config'
 const App = () => {
   return (
     // <NativeBaseProvider>
