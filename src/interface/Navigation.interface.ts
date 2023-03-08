@@ -6,7 +6,9 @@ export type RootStackParamListInterface = {
     Login: undefined;
     Signup: undefined;
     Home: undefined;
-    
+    pinSetup:undefined;
+    accountSetup:undefined;
+    addAccount:undefined;
   };
 
   export type ScreenNavigationProp = NativeStackNavigationProp<

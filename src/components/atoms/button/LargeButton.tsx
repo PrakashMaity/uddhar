@@ -4,7 +4,6 @@ import { styleConst } from '../../../style/root.style'
 import { responsiveHeight, responsiveWidth } from '../../../utils/ResponsiveUI'
 import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
 import { TouchableOpacity } from 'react-native';
-// npm i --save-dev @types/react-native-vector-icons
 interface ButtonInterface{
   title?: string;
   plusIcon?: boolean;

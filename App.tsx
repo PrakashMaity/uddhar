@@ -1,11 +1,7 @@
-import { StatusBar, StyleSheet, Text, View } from 'react-native';
-import React from 'react';
-import { NavigationContainer } from '@react-navigation/native';
-import { NativeBaseProvider } from 'native-base';
-import { styleConst } from './src/style/root.style';
-import StackNavigation from './src/navigation/stackNavigator/StackNavigation';
-import './assets/i18n/i18n.config'
-import { Realm, createRealmContext } from '@realm/react'
+import React from "react";
+import StackNavigation from "./src/navigation/stackNavigator/StackNavigation";
+import "./assets/i18n/i18n.config";
+import { Realm, createRealmContext } from "@realm/react";
 class Task extends Realm.Object {
   _id!: Realm.BSON.ObjectId;
   description!: string;
@@ -21,24 +17,26 @@ class Task extends Realm.Object {
   }
 
   static schema = {
-    name: 'Task',
-    primaryKey: '_id',
+    name: "Task",
+    primaryKey: "_id",
     properties: {
-      _id: 'objectId',
-      description: 'string',
-      isComplete: { type: 'bool', default: false },
-      createdAt: 'date'
+      _id: "objectId",
+      description: "string",
+      isComplete: { type: "bool", default: false },
+      createdAt: "date",
     },
   };
 }
 
-const { RealmProvider, useRealm, useQuery } = createRealmContext({ schema: [Task] })
+const { RealmProvider, useRealm, useQuery } = createRealmContext({
+  schema: [Task],
+});
 
 const App = () => {
   return (
     <RealmProvider>
-     <StackNavigation />
+        <StackNavigation />
     </RealmProvider>
-  )
+  );
 };
 export default App;
