@@ -1,6 +1,9 @@
 export const images = {
     SplashScreen: {
         dot: require("../../assets/images/intro/Ellipse_38.png"),
+    }, 
+     SignUp: {
+        google: require("../../assets/images/signUp/google.png"),
     },
     IntroScreen: {
         slider1: require("../../assets/images/intro/Ilustration1.png"),

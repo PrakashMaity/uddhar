@@ -8,6 +8,8 @@ import { styleConst } from "../../../style/root.style";
 import { styles } from "./Signup.style";
 import { responsiveHeight, responsiveWidth } from "../../../utils/ResponsiveUI";
 import LargeButton from "../../../components/atoms/button/LargeButton";
+import LogoWithButton from "../../../components/atoms/button/LogoWithButton";
+import { images } from "../../../constant/images.contant";
 export default function Signup() {
   const navigation = useNavigation<ScreenNavigationProp>();
   const [name, setName] = useState("");
@@ -69,17 +71,18 @@ export default function Signup() {
         >
           or With
         </Text>
-        <View style={{  }}>
-          <LargeButton
+        <View style={{}}>
+          <LogoWithButton
             onPress={() => {
               navigation.navigate("Login");
             }}
-            buttonTextColor={styleConst.COLOR.VIOLET.VIOLET_100}
+            buttonTextColor={styleConst.COLOR.DARK.LIGHT_50}
             title="Sign Up with Google"
             style={{
               marginVertical: responsiveHeight(16),
-              backgroundColor: styleConst.COLOR.VIOLET.VIOLET_20,
+              backgroundColor: "rgba(52,52,52,0)"
             }}
+            icon={images.SignUp.google}
           />
         </View>
         <Text
