@@ -7,6 +7,7 @@ import { styleConst } from "../../../../style/root.style";
 const { width } = Dimensions.get("window");
 import { useTranslation } from "react-i18next";
 import { sliderData } from "./pageData/SliderData";
+import { styles } from "./IntroScreen.style";
 
 export default function IntroScreen() {
   const navigation:any = useNavigation();
@@ -21,7 +22,7 @@ export default function IntroScreen() {
   };
 
   return (
-    <View style={{ flex: 1, backgroundColor: "white" }}>
+    <View style={styles.mainContainer}>
       <View style={{ flex: 1 }}>
         <ScrollView
           onMomentumScrollEnd={handleScrollEnd}
