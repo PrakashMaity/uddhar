@@ -1,7 +1,7 @@
 import { View, Text } from 'react-native'
 import React, { useEffect } from 'react'
 import { Image } from 'react-native'
-import { images } from '../../../../constant/images.contant'
+import { images } from '../../../constant/images.contant'
 import { useNavigation } from '@react-navigation/native'
 import { styles } from './SplashScreen.style'
 export default function SplashScreen() {

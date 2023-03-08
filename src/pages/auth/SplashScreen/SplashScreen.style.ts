@@ -1,6 +1,6 @@
 import { StyleSheet } from "react-native";
-import { styleConst } from "../../../../style/root.style";
-import { responsiveHeight, responsiveWidth } from "../../../../utils/ResponsiveUI";
+import { styleConst } from "../../../style/root.style";
+import { responsiveHeight, responsiveWidth } from "../../../utils/ResponsiveUI";
 
 export const styles = StyleSheet.create({
     mainContainer: { flex: 1, backgroundColor: styleConst.COLOR.VIOLET.VIOLET_100 },

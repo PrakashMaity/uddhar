@@ -8,9 +8,10 @@ const { width } = Dimensions.get("window");
 import { useTranslation } from "react-i18next";
 import { sliderData } from "./pageData/SliderData";
 import { styles } from "./IntroScreen.style";
+import { ScreenNavigationProp } from "../../../../interface/Navigation.interface";
 
 export default function IntroScreen() {
-  const navigation:any = useNavigation();
+  const navigation = useNavigation<ScreenNavigationProp>();
   const { t, i18n } = useTranslation();
   const [activePage, setActivePage] = useState(0);
   const handleScrollEnd = (

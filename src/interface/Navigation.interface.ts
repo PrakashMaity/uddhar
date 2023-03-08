@@ -1,4 +1,6 @@
-export interface RootStackParamListInterface{
+import { NativeStackNavigationProp } from "@react-navigation/native-stack";
+
+export type RootStackParamListInterface = {
     SplashScreen: undefined;
     IntroScreen: undefined;
     Login: undefined;
@@ -6,3 +8,6 @@ export interface RootStackParamListInterface{
     Home: undefined;
     
   };
+
+  export type ScreenNavigationProp = NativeStackNavigationProp<
+  RootStackParamListInterface>;
