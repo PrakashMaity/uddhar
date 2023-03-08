@@ -49,7 +49,9 @@ export const styles = StyleSheet.create({
       flexDirection:'row',
       justifyContent:'space-evenly',
       alignItems:'center',
-      marginTop:responsiveHeight(16)
+      marginTop:responsiveHeight(16),
+      flexWrap:"wrap",
+      gap:responsiveHeight(8)
     },
     imageWrapperBox:{
       width:responsiveWidth(80),
@@ -59,40 +61,11 @@ export const styles = StyleSheet.create({
       alignItems:'center',
       justifyContent:'center'
     },
-    // dropdown: {
-    //     height: 50,
-    //     width: "100%",
-    //     alignSelf: "center",
-    //     backgroundColor: "white",
-    //     borderColor: styleConst.COLOR.LIGHT.LIGHT_100,
-    //     borderWidth: 1,
-    //     marginTop:responsiveHeight(24),
-    //     borderRadius:16
-    //   },
-    //   icon: {
-    //     marginRight: 5,
-    //   },
-    //   label: {
-    //     position: 'absolute',
-    //     backgroundColor: 'white',
-    //     left: 22,
-    //     top: 8,
-    //     zIndex: 999,
-    //     paddingHorizontal: 8,
-    //     fontSize: 14,
-    //   },
-    //   placeholderStyle: {
-    //     fontSize: 16,
-    //   },
-    //   selectedTextStyle: {
-    //     fontSize: 16,
-    //   },
-    //   iconStyle: {
-    //     width: 20,
-    //     height: 20,
-    //   },
-    //   inputSearchStyle: {
-    //     height: 40,
-    //     fontSize: 16,
-    //   },
+    imageWrapperBoxActive:{
+      backgroundColor:"#F1F1FA"
+    },
+   bankBoxText:{
+    color:styleConst.COLOR.VIOLET.VIOLET_100,
+    fontSize:styleConst.FONT_SIZE.SMALL,
+   }
 })

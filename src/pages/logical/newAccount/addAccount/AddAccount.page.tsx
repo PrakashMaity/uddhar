@@ -55,7 +55,7 @@ const AddAccount = () => {
               }}
             />
           </View>
-          <View style={styles.imageWrapperBox}>
+          <View style={[styles.imageWrapperBox,styles.imageWrapperBoxActive]}>
             <Image
               source={images.ADD_ACCOUNT.BANK_LOGOS.AXIS}
               style={{
@@ -65,7 +65,37 @@ const AddAccount = () => {
               }}
             />
           </View>
-          <View style={styles.imageWrapperBox}>
+           <View style={[styles.imageWrapperBox,styles.imageWrapperBoxActive]}>
+            <Image
+              source={images.ADD_ACCOUNT.BANK_LOGOS.SBI}
+              style={{
+                height: responsiveHeight(24),
+                width: responsiveWidth(24),
+                resizeMode: "contain",
+              }}
+            />
+          </View>
+          <View style={[styles.imageWrapperBox,styles.imageWrapperBoxActive]}>
+            <Image
+              source={images.ADD_ACCOUNT.BANK_LOGOS.AXIS}
+              style={{
+                height: responsiveHeight(24),
+                width: responsiveWidth(24),
+                resizeMode: "contain",
+              }}
+            />
+          </View>
+          <View style={[styles.imageWrapperBox,styles.imageWrapperBoxActive]}>
+            <Image
+              source={images.ADD_ACCOUNT.BANK_LOGOS.SBI}
+              style={{
+                height: responsiveHeight(24),
+                width: responsiveWidth(24),
+                resizeMode: "contain",
+              }}
+            />
+          </View>
+          <View style={[styles.imageWrapperBox,styles.imageWrapperBoxActive]}>
             <Image
               source={images.ADD_ACCOUNT.BANK_LOGOS.PNB}
               style={{
@@ -75,7 +105,7 @@ const AddAccount = () => {
               }}
             />
           </View>
-          <View style={styles.imageWrapperBox}>
+          <View style={[styles.imageWrapperBox,styles.imageWrapperBoxActive]}>
             <Image
               source={images.ADD_ACCOUNT.BANK_LOGOS.SBI}
               style={{
@@ -84,6 +114,11 @@ const AddAccount = () => {
                 resizeMode: "contain",
               }}
             />
+          </View>
+         
+          
+          <View style={styles.imageWrapperBox}>
+            <Text style={styles.bankBoxText}>See other</Text>
           </View>
         </View>
         <View style={styles.buttonWrapper}>
