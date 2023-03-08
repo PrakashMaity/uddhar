@@ -10,6 +10,7 @@ import { RootStackParamListInterface } from '../../interface/Navigation.interfac
 import PinSetup from '../../pages/logical/newAccount/pinSetup/PinSetup.page';
 import SetupAccount from '../../pages/logical/newAccount/setupAccount/SetupAccount.page';
 import AddAccount from '../../pages/logical/newAccount/addAccount/AddAccount.page';
+import Profile from '../../pages/profile/Profile.page';
 
 const Stack = createNativeStackNavigator<RootStackParamListInterface>()
 
@@ -21,6 +22,7 @@ export default function StackNavigation() {
           headerShown: false
         }}
       >
+        <Stack.Screen name="profile" component={Profile} />
         <Stack.Screen name="addAccount" component={AddAccount} />
         <Stack.Screen name="accountSetup" component={SetupAccount} />
         <Stack.Screen name="pinSetup" component={PinSetup} />

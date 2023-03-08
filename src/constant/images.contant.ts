@@ -13,5 +13,11 @@ export const images = {
             PNB:require('../../assets/images/addAccount/pnb.png'),
             AXIS:require('../../assets/images/addAccount/axis.png'),
         }
+    },
+    ICON:{
+        // WALLET:require('../../assets/images/icon/'),
+        // SETTINGS:require('../../assets/images/icon/settings.png'),
+        // UPLOAD:require('../../assets/images/icon/upload.png'),
+        // LOGOUT:require('../../assets/images/icon/logout.png'),
     }
 };
