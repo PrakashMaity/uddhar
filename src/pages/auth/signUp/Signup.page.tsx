@@ -1,81 +1,100 @@
-import { View, Text, TextInput, Pressable } from 'react-native'
-import React, { useState } from 'react'
-import { useNavigation } from '@react-navigation/native'
-import Toast from 'react-native-simple-toast';
+import { View, Text, TextInput, Pressable } from "react-native";
+import React, { useState } from "react";
+import { useNavigation } from "@react-navigation/native";
+import Toast from "react-native-simple-toast";
+import { ScreenNavigationProp } from "../../../interface/Navigation.interface";
+import SimpleHeader from "../../../components/atoms/header/SimpleHeader";
+import { styleConst } from "../../../style/root.style";
+import { styles } from "./Signup.style";
+import { responsiveHeight, responsiveWidth } from "../../../utils/ResponsiveUI";
+import LargeButton from "../../../components/atoms/button/LargeButton";
+import LogoWithButton from "../../../components/atoms/button/LogoWithButton";
+import { images } from "../../../constant/images.contant";
 export default function Signup() {
-  const navigation:any = useNavigation()
-  const [name, setName] = useState("")
-  const [email, setEmail] = useState("")
-  const [password, setPassWord] = useState("")
+  const navigation = useNavigation<ScreenNavigationProp>();
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassWord] = useState("");
 
-  const onpressSubmit = async () => {
+  const onSignUpHandler = async () => {
     try {
-
-      let EmailVerify = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/
-
-      let isemailValid = EmailVerify.test(email)
-      if (name == "" || name.trim().length == 0) {
-        Toast.show("enter name", Toast.LONG)
-      } else {
-        if (email == "") {
-          Toast.show("Enter Email", Toast.LONG)
-        } else {
-          if (!isemailValid) {
-            Toast.show("Enter valid email id", Toast.LONG)
-          } else {
-            if (password == "") {
-              Toast.show("Enter password", Toast.LONG)
-            } else {
-              if (password.length < 8) {
-                Toast.show("Enter minimun 8 digits password", Toast.LONG)
-              } else {
-                console.log(name)
-                console.log(email, "  ", isemailValid)
-                console.log(password)
-                navigation.navigate("Home")
-              }
-            }
-          }
-        }
-      }
+      navigation.navigate("Home");
     } catch (error) {
-      console.log("onpressSubmit", error)
+      console.log("onSignUpHandler", error);
     }
-  }
-
-
+  };
 
   return (
-    <View style={{ flex: 1 }} >
+    <View style={styles.mainContainer}>
+      <SimpleHeader back title="Sign Up" />
+      <View style={styles.inputGroup}>
+        <View style={styles.inputWrapper}>
+          <TextInput
+            value={name}
+            placeholder="Name"
+            keyboardType="default"
+            onChangeText={(e) => setName(e)}
+          />
+        </View>
+        <View style={styles.inputWrapper}>
+          <TextInput
+            value={email}
+            placeholder="Email"
+            keyboardType="email-address"
+            onChangeText={(e) => setEmail(e)}
+          />
+        </View>
+        <View style={styles.inputWrapper}>
+          <TextInput
+            value={password}
+            placeholder="Password"
+            onChangeText={(e) => setPassWord(e)}
+          />
+        </View>
+      </View>
 
-      <View style={{ height: 50, width: "80%", alignSelf: "center", backgroundColor: "#f8f8f8", borderColor: "grey", borderWidth: 1, marginTop: 20 }} >
-        <TextInput
-          value={name}
-          placeholder='Name'
-          keyboardType="default"
-          onChangeText={(e) => setName(e)}
-        />
+      <View style={styles.buttonGroup}>
+        <View style={{  }}>
+          <LargeButton
+            title="Sign Up"
+            onPress={() => {
+              navigation.navigate("Signup");
+            }}
+          />
+        </View>
+        <Text
+          style={{
+            fontSize: styleConst.FONT_SIZE.SMALL,
+            marginTop: 20,
+            textAlign: "center",
+          }}
+        >
+          or With
+        </Text>
+        <View style={{}}>
+          <LogoWithButton
+            onPress={() => {
+              navigation.navigate("Login");
+            }}
+            buttonTextColor={styleConst.COLOR.DARK.LIGHT_50}
+            title="Sign Up with Google"
+            style={{
+              marginVertical: responsiveHeight(16),
+              backgroundColor: "rgba(52,52,52,0)"
+            }}
+            icon={images.SignUp.google}
+          />
+        </View>
+        <Text
+          style={{
+            fontSize:styleConst.FONT_SIZE.REGULAR_1,
+            marginTop: 20,
+            textAlign: "center",
+          }}
+        >
+          Already have an account? <Text style={{textDecorationLine:"underline",color:styleConst.COLOR.VIOLET.VIOLET_100}}>Login</Text> 
+        </Text>
       </View>
-      <View style={{ height: 50, width: "80%", alignSelf: "center", backgroundColor: "#f8f8f8", borderColor: "grey", borderWidth: 1, marginTop: 20 }} >
-        <TextInput
-          value={email}
-          placeholder='Email'
-          keyboardType="email-address"
-          onChangeText={(e) => setEmail(e)}
-        />
-      </View>
-      <View style={{ height: 50, width: "80%", alignSelf: "center", backgroundColor: "#f8f8f8", borderColor: "grey", borderWidth: 1, marginTop: 20 }} >
-        <TextInput
-          value={password}
-          placeholder='Password'
-          onChangeText={(e) => setPassWord(e)}
-        />
-      </View>
-      <Pressable onPress={onpressSubmit} style={{ height: 50, width: "80%", alignSelf: "center", backgroundColor: "steelblue", marginTop: 20, justifyContent: "center", alignItems: "center" }} >
-        <Text style={{ color: "white", fontSize: 18, fontWeight: "bold" }} >SignUp</Text>
-      </Pressable >
-
-      <Text onPress={() => navigation.navigate("Login")} style={{ fontSize: 16, marginTop: 20, textAlign: "center", textDecorationLine: "underline" }} >Back to Login</Text>
     </View>
-  )
+  );
 }

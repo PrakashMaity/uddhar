@@ -1,4 +1,4 @@
-import { StyleSheet, Text, View } from 'react-native'
+import { StyleSheet, Text, View, Image } from 'react-native'
 import React from 'react'
 import { styleConst } from '../../../style/root.style'
 import { responsiveHeight, responsiveWidth } from '../../../utils/ResponsiveUI'
@@ -11,12 +11,12 @@ interface ButtonInterface {
     onPress?: () => void;
     buttonColor?: string;
     buttonTextColor?: string;
-    Icon?:  any
+    icon?: any
 }
 
-export default function LogoWithButton({ title, plusIcon, style, onPress, buttonColor, buttonTextColor,Icon }: ButtonInterface) {
-   console.log(Icon)
-   
+export default function LogoWithButton({ title, plusIcon, style, onPress, buttonColor, buttonTextColor, icon }: ButtonInterface) {
+    //    console.log(Icon)
+
     const styles = StyleSheet.create({
         customButton: {
             backgroundColor: buttonColor == undefined ? styleConst.COLOR.VIOLET.VIOLET_100 : buttonColor,
@@ -29,16 +29,13 @@ export default function LogoWithButton({ title, plusIcon, style, onPress, button
         },
         buttonText: {
             fontFamily: styleConst.FONT_FAMILY.INTER_SEMIBOLD,
-            fontSize: responsiveHeight(18),
+            fontSize: responsiveHeight(19),
             color: buttonTextColor == undefined ? styleConst.COLOR.LIGHT.LIGHT_80 : buttonTextColor
         },
-        plusBox: {
-            height: responsiveHeight(22),
-            width: responsiveHeight(22),
-            borderWidth: responsiveHeight(2.5),
+        iconBox: {
+            height: responsiveHeight(28),
+            width: responsiveHeight(28),
             marginRight: responsiveHeight(6),
-            borderColor: buttonTextColor == undefined ? styleConst.COLOR.LIGHT.LIGHT_80 : buttonTextColor,
-            borderRadius: responsiveHeight(6),
             justifyContent: "center",
             alignItems: "center"
         }
@@ -48,10 +45,9 @@ export default function LogoWithButton({ title, plusIcon, style, onPress, button
             disabled={onPress ? false : true}
             onPress={onPress}
             style={[styles.customButton, style]}>
-            {Icon &&
-                <View style={styles.plusBox} >
-                   <Icon/>
-                    {/* <FontAwesome5 name="plus" color={buttonTextColor == undefined ? styleConst.COLOR.LIGHT.LIGHT_80 : buttonTextColor} size={responsiveWidth(10)} /> */}
+            {icon &&
+                <View style={styles.iconBox} >
+                    <Image source={icon} style={{ height: "100%", width: "100%", resizeMode: "contain" }} />
                 </View>}
             {title && <Text numberOfLines={1} style={styles.buttonText}>
                 {title}
