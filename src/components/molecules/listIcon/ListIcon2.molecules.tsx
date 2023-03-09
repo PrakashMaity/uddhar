@@ -13,11 +13,11 @@ interface ListIconInterface {
     icon: string;
     route: string;
     theme: string;
-    price?:string;
+    price?: string;
   };
   bottomBorder?: boolean;
 }
-const ListIcon2 = ({ content,bottomBorder = true }: ListIconInterface) => {
+const ListIcon2 = ({ content, bottomBorder = true }: ListIconInterface) => {
   return (
     <View
       style={[
@@ -26,12 +26,12 @@ const ListIcon2 = ({ content,bottomBorder = true }: ListIconInterface) => {
     >
       <SquareBox icon={content.icon} theme={content.theme} />
       <View style={styles.middleSection}>
-      <Text style={[styles.listTitle,{fontFamily:styleConst.FONT_FAMILY.INTER_SEMIBOLD}]}>{content.title}</Text>
-      <Text style={[styles.listTitle,{fontFamily:styleConst.FONT_FAMILY.PRIMARY}]}>Buy some grocery</Text>
+        <Text style={[styles.listTitle, { fontFamily: styleConst.FONT_FAMILY.INTER_SEMIBOLD }]}>{content.title}</Text>
+        <Text style={[styles.listTitle, { fontFamily: styleConst.FONT_FAMILY.PRIMARY }]}>Buy some grocery</Text>
       </View>
       <View style={styles.rightSection}>
-      <Text style={[styles.listTitleRight,{color:styleConst.COLOR.RED.RED_100}]}>- $120</Text>
-      <Text style={[styles.listTime,{fontFamily:styleConst.FONT_FAMILY.PRIMARY}]}>10:00 AM</Text>
+        <Text style={[styles.listTitleRight, { color: styleConst.COLOR.RED.RED_100 }]}>- $120</Text>
+        <Text style={[styles.listTime, { fontFamily: styleConst.FONT_FAMILY.PRIMARY }]}>10:00 AM</Text>
       </View>
     </View>
   );
@@ -44,28 +44,28 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     alignItems: "center",
     gap: responsiveWidth(10),
-    padding:responsiveWidth(12),
-    backgroundColor:"#FCFCFC",
-    borderRadius:responsiveWidth(15)
+    padding: responsiveWidth(12),
+    backgroundColor: "#FCFCFC",
+    borderRadius: responsiveWidth(15)
   },
   listTitle: {
     fontSize: styleConst.FONT_SIZE.REGULAR_1,
     color: styleConst.COLOR.DARK.DARK_25,
-    
+
   },
-  middleSection:{
-    flex:1,
-    gap:responsiveHeight(10)
+  middleSection: {
+    flex: 1,
+    gap: responsiveHeight(10)
   },
-  rightSection:{
-   
+  rightSection: {
+
   },
-  listTitleRight:{
+  listTitleRight: {
     fontSize: styleConst.FONT_SIZE.REGULAR_1,
     color: styleConst.COLOR.DARK.DARK_25,
-    fontFamily:styleConst.FONT_FAMILY.INTER_BOLD,
+    fontFamily: styleConst.FONT_FAMILY.INTER_BOLD,
   },
-  listTime:{
+  listTime: {
     fontSize: styleConst.FONT_SIZE.SMALL,
 
   }

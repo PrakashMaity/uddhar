@@ -109,7 +109,9 @@ export default function Signup() {
               title="Sign Up with Google"
               style={{
                 marginVertical: responsiveHeight(10),
-                backgroundColor: "rgba(52,52,52,0)"
+                backgroundColor: "rgba(52,52,52,0)",
+                borderWidth:responsiveHeight(1.5),
+                borderColor:styleConst.COLOR.GREY.GREY_20
               }}
               icon={images.SignUp.google}
             />
