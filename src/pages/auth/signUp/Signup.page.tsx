@@ -10,6 +10,8 @@ import { responsiveHeight, responsiveWidth } from "../../../utils/ResponsiveUI";
 import LargeButton from "../../../components/atoms/button/LargeButton";
 import LogoWithButton from "../../../components/atoms/button/LogoWithButton";
 import { images } from "../../../constant/images.contant";
+import { globalStyle } from "../../../style/global.style";
+import Ionicons from "react-native-vector-icons/Ionicons";
 export default function Signup() {
   const navigation = useNavigation<ScreenNavigationProp>();
   const [name, setName] = useState("");
@@ -27,73 +29,100 @@ export default function Signup() {
   return (
     <View style={styles.mainContainer}>
       <SimpleHeader back title="Sign Up" />
-      <View style={styles.inputGroup}>
-        <View style={styles.inputWrapper}>
+
+      <View style={{ flex: 1, marginHorizontal: responsiveWidth(20) }} >
+
+        <View style={styles.inputGroup}>
           <TextInput
             value={name}
             placeholder="Name"
+            placeholderTextColor={styleConst.COLOR.GREY.GREY_20}
             keyboardType="default"
             onChangeText={(e) => setName(e)}
+            style={globalStyle.textInputBox}
           />
-        </View>
-        <View style={styles.inputWrapper}>
           <TextInput
             value={email}
             placeholder="Email"
+            placeholderTextColor={styleConst.COLOR.GREY.GREY_20}
             keyboardType="email-address"
             onChangeText={(e) => setEmail(e)}
+            style={globalStyle.textInputBox}
           />
+          <View style={globalStyle.textInputBoxWithIcon}>
+            <View style={{ flex: 1 }} >
+              <TextInput
+                value={password}
+                secureTextEntry
+                placeholder="Password"
+                placeholderTextColor={styleConst.COLOR.GREY.GREY_20}
+                onChangeText={(e) => setPassWord(e)}
+                style={globalStyle.textInputOnlyText}
+              />
+            </View>
+            <Pressable style={{ paddingHorizontal: responsiveWidth(1), justifyContent: "center" }} >
+              <Ionicons
+                name="eye-outline"
+                // ios-eye-off-outline
+                color={styleConst.COLOR.GREY.GREY_20}
+                size={responsiveWidth(25)}
+              />
+            </Pressable>
+          </View>
         </View>
-        <View style={styles.inputWrapper}>
-          <TextInput
-            value={password}
-            placeholder="Password"
-            onChangeText={(e) => setPassWord(e)}
-          />
-        </View>
-      </View>
 
-      <View style={styles.buttonGroup}>
-        <View style={{  }}>
-          <LargeButton
-            title="Sign Up"
-            onPress={() => {
-              navigation.navigate("Signup");
-            }}
-          />
+        <View style={{ flexDirection: "row", marginTop: responsiveHeight(30), alignItems: "center" }} >
+          <View style={{ height: responsiveHeight(24), width: responsiveHeight(24), borderWidth: responsiveHeight(2.5), borderColor: styleConst.COLOR.VIOLET.VIOLET_100, borderRadius: responsiveHeight(5) }} ></View>
+          <Text style={{ marginLeft: responsiveWidth(14), fontSize: responsiveHeight(17), lineHeight:responsiveHeight(23), width: "90%", fontFamily: styleConst.FONT_FAMILY.INTER_SEMIBOLD, color: styleConst.COLOR.DARK.DARK_50 }} >By signing up, you agree to the <Text style={{ color: styleConst.COLOR.VIOLET.VIOLET_100 }} >Terms of Service and Privacy Policy</Text></Text>
         </View>
-        <Text
-          style={{
-            fontSize: styleConst.FONT_SIZE.SMALL,
-            marginTop: 20,
-            textAlign: "center",
-          }}
-        >
-          or With
-        </Text>
-        <View style={{}}>
-          <LogoWithButton
-            onPress={() => {
-              navigation.navigate("Login");
-            }}
-            buttonTextColor={styleConst.COLOR.DARK.LIGHT_50}
-            title="Sign Up with Google"
+
+
+        <View style={styles.buttonGroup}>
+          <View style={{}}>
+            <LargeButton
+              title="Sign Up"
+              onPress={() => {
+                navigation.navigate("Signup");
+              }}
+            />
+          </View>
+          <Text
             style={{
-              marginVertical: responsiveHeight(16),
-              backgroundColor: "rgba(52,52,52,0)"
+              fontSize: responsiveHeight(16),
+              marginTop: 20,
+              textAlign: "center",
+              color: styleConst.COLOR.GREY.GREY_20,
+              fontFamily:styleConst.FONT_FAMILY.INTER_SEMIBOLD
             }}
-            icon={images.SignUp.google}
-          />
+          >
+            or With
+          </Text>
+          <View style={{}}>
+            <LogoWithButton
+              onPress={() => {
+                navigation.navigate("Login");
+              }}
+              buttonTextColor={styleConst.COLOR.DARK.DARK_50}
+              title="Sign Up with Google"
+              style={{
+                marginVertical: responsiveHeight(10),
+                backgroundColor: "rgba(52,52,52,0)"
+              }}
+              icon={images.SignUp.google}
+            />
+          </View>
+          <Text
+            style={{
+              fontSize:responsiveHeight(18),
+              fontFamily:styleConst.FONT_FAMILY.INTER_SEMIBOLD,
+              marginTop: 20,
+              textAlign: "center",
+              color:styleConst.COLOR.DARK.DARK_50
+            }}
+          >
+            Already have an account? <Text onPress={()=>navigation.navigate("Login")} style={{ textDecorationLine: "underline", color: styleConst.COLOR.VIOLET.VIOLET_100 }}>Login</Text>
+          </Text>
         </View>
-        <Text
-          style={{
-            fontSize:styleConst.FONT_SIZE.REGULAR_1,
-            marginTop: 20,
-            textAlign: "center",
-          }}
-        >
-          Already have an account? <Text style={{textDecorationLine:"underline",color:styleConst.COLOR.VIOLET.VIOLET_100}}>Login</Text> 
-        </Text>
       </View>
     </View>
   );

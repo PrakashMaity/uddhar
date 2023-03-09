@@ -22,15 +22,15 @@ export default function StackNavigation() {
           headerShown: false
         }}
       >
-        <Stack.Screen name="profile" component={Profile} />
-        <Stack.Screen name="addAccount" component={AddAccount} />
-        <Stack.Screen name="accountSetup" component={SetupAccount} />
-        <Stack.Screen name="pinSetup" component={PinSetup} />
         <Stack.Screen name="SplashScreen" component={SplashScreen} />
         <Stack.Screen name="IntroScreen" component={IntroScreen} />
         <Stack.Screen name="Login" component={Login} />
         <Stack.Screen name="Signup" component={Signup} />
         <Stack.Screen name="Home" component={Home} />
+        <Stack.Screen name="profile" component={Profile} />
+        <Stack.Screen name="addAccount" component={AddAccount} />
+        <Stack.Screen name="accountSetup" component={SetupAccount} />
+        <Stack.Screen name="pinSetup" component={PinSetup} />
       </Stack.Navigator>
     </NavigationContainer>
   )
