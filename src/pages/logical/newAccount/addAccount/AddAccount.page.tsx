@@ -1,6 +1,6 @@
 import { Image, StyleSheet, Text, TextInput, View } from "react-native";
 import React, { useState } from "react";
-import { styleConst } from "../../../../style/root.style";
+import { styleConst } from "../../../../theme/root.style";
 import { styles } from "./AddAccount.style";
 import SimpleHeader from "../../../../components/atoms/header/SimpleHeader";
 import LargeButton from "../../../../components/atoms/button/LargeButton";
@@ -8,12 +8,9 @@ import { images } from "../../../../constant/images.contant";
 import {
   responsiveHeight,
   responsiveWidth,
-} from "../../../../utils/ResponsiveUI";
-
-
+} from "../../../../helper/ResponsiveUI";
 
 const AddAccount = () => {
-  
   return (
     <View
       style={{ flex: 1, backgroundColor: styleConst.COLOR.VIOLET.VIOLET_100 }}
@@ -45,7 +42,7 @@ const AddAccount = () => {
               }}
             />
           </View>
-          <View style={[styles.imageWrapperBox,styles.imageWrapperBoxActive]}>
+          <View style={[styles.imageWrapperBox, styles.imageWrapperBoxActive]}>
             <Image
               source={images.ADD_ACCOUNT.BANK_LOGOS.AXIS}
               style={{
@@ -55,7 +52,7 @@ const AddAccount = () => {
               }}
             />
           </View>
-           <View style={[styles.imageWrapperBox,styles.imageWrapperBoxActive]}>
+          <View style={[styles.imageWrapperBox, styles.imageWrapperBoxActive]}>
             <Image
               source={images.ADD_ACCOUNT.BANK_LOGOS.SBI}
               style={{
@@ -65,7 +62,7 @@ const AddAccount = () => {
               }}
             />
           </View>
-          <View style={[styles.imageWrapperBox,styles.imageWrapperBoxActive]}>
+          <View style={[styles.imageWrapperBox, styles.imageWrapperBoxActive]}>
             <Image
               source={images.ADD_ACCOUNT.BANK_LOGOS.AXIS}
               style={{
@@ -75,7 +72,7 @@ const AddAccount = () => {
               }}
             />
           </View>
-          <View style={[styles.imageWrapperBox,styles.imageWrapperBoxActive]}>
+          <View style={[styles.imageWrapperBox, styles.imageWrapperBoxActive]}>
             <Image
               source={images.ADD_ACCOUNT.BANK_LOGOS.SBI}
               style={{
@@ -85,7 +82,7 @@ const AddAccount = () => {
               }}
             />
           </View>
-          <View style={[styles.imageWrapperBox,styles.imageWrapperBoxActive]}>
+          <View style={[styles.imageWrapperBox, styles.imageWrapperBoxActive]}>
             <Image
               source={images.ADD_ACCOUNT.BANK_LOGOS.PNB}
               style={{
@@ -95,7 +92,7 @@ const AddAccount = () => {
               }}
             />
           </View>
-          <View style={[styles.imageWrapperBox,styles.imageWrapperBoxActive]}>
+          <View style={[styles.imageWrapperBox, styles.imageWrapperBoxActive]}>
             <Image
               source={images.ADD_ACCOUNT.BANK_LOGOS.SBI}
               style={{
@@ -105,8 +102,7 @@ const AddAccount = () => {
               }}
             />
           </View>
-         
-          
+
           <View style={styles.imageWrapperBox}>
             <Text style={styles.bankBoxText}>See other</Text>
           </View>

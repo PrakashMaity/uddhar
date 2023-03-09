@@ -4,14 +4,17 @@ import { useNavigation } from "@react-navigation/native";
 import Toast from "react-native-simple-toast";
 import { ScreenNavigationProp } from "../../../interface/Navigation.interface";
 import SimpleHeader from "../../../components/atoms/header/SimpleHeader";
-import { styleConst } from "../../../style/root.style";
+import { styleConst } from "../../../theme/root.style";
 import { styles } from "./Signup.style";
-import { responsiveHeight, responsiveWidth } from "../../../utils/ResponsiveUI";
+import {
+  responsiveHeight,
+  responsiveWidth,
+} from "../../../helper/ResponsiveUI";
 import LargeButton from "../../../components/atoms/button/LargeButton";
 import LogoWithButton from "../../../components/atoms/button/LogoWithButton";
 import { images } from "../../../constant/images.contant";
-import { globalStyle } from "../../../style/global.style";
 import Ionicons from "react-native-vector-icons/Ionicons";
+import { globalStyle } from "../../../theme/global.style";
 export default function Signup() {
   const navigation = useNavigation<ScreenNavigationProp>();
   const [name, setName] = useState("");
@@ -73,7 +76,7 @@ export default function Signup() {
 
         <View style={{ flexDirection: "row", marginTop: responsiveHeight(30), alignItems: "center" }} >
           <View style={{ height: responsiveHeight(24), width: responsiveHeight(24), borderWidth: responsiveHeight(2.5), borderColor: styleConst.COLOR.VIOLET.VIOLET_100, borderRadius: responsiveHeight(5) }} ></View>
-          <Text style={{ marginLeft: responsiveWidth(14), fontSize: responsiveHeight(17), lineHeight:responsiveHeight(23), width: "90%", fontFamily: styleConst.FONT_FAMILY.INTER_SEMIBOLD, color: styleConst.COLOR.DARK.DARK_50 }} >By signing up, you agree to the <Text style={{ color: styleConst.COLOR.VIOLET.VIOLET_100 }} >Terms of Service and Privacy Policy</Text></Text>
+          <Text style={{ marginLeft: responsiveWidth(14), fontSize: responsiveHeight(17), lineHeight:responsiveHeight(23), width: "90%", fontFamily: styleConst.FONT_FAMILY.INTER_SEMIBOLD, color: styleConst.COLOR.DARK.LIGHT_50 }} >By signing up, you agree to the <Text style={{ color: styleConst.COLOR.VIOLET.VIOLET_100 }} >Terms of Service and Privacy Policy</Text></Text>
         </View>
 
 
@@ -102,7 +105,7 @@ export default function Signup() {
               onPress={() => {
                 navigation.navigate("Login");
               }}
-              buttonTextColor={styleConst.COLOR.DARK.DARK_50}
+              buttonTextColor={styleConst.COLOR.DARK.LIGHT_50}
               title="Sign Up with Google"
               style={{
                 marginVertical: responsiveHeight(10),
@@ -117,7 +120,7 @@ export default function Signup() {
               fontFamily:styleConst.FONT_FAMILY.INTER_SEMIBOLD,
               marginTop: 20,
               textAlign: "center",
-              color:styleConst.COLOR.DARK.DARK_50
+              color:styleConst.COLOR.DARK.LIGHT_50
             }}
           >
             Already have an account? <Text onPress={()=>navigation.navigate("Login")} style={{ textDecorationLine: "underline", color: styleConst.COLOR.VIOLET.VIOLET_100 }}>Login</Text>

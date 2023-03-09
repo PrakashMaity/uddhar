@@ -2,8 +2,11 @@ import { View, Text, ScrollView, Dimensions, Image } from "react-native";
 import React, { Fragment, useState } from "react";
 import { useNavigation } from "@react-navigation/native";
 import LargeButton from "../../../../components/atoms/button/LargeButton";
-import { responsiveHeight, responsiveWidth } from "../../../../utils/ResponsiveUI";
-import { styleConst } from "../../../../style/root.style";
+import {
+  responsiveHeight,
+  responsiveWidth,
+} from "../../../../helper/ResponsiveUI";
+import { styleConst } from "../../../../theme/root.style";
 const { width } = Dimensions.get("window");
 import { useTranslation } from "react-i18next";
 import { sliderData } from "./pageData/SliderData";
@@ -14,9 +17,7 @@ export default function IntroScreen() {
   const navigation = useNavigation<ScreenNavigationProp>();
   const { t, i18n } = useTranslation();
   const [activePage, setActivePage] = useState(0);
-  const handleScrollEnd = (
-    event: any
-  ) => {
+  const handleScrollEnd = (event: any) => {
     let contentOffsetX = event.nativeEvent.contentOffset.x + 10;
     let curretPg = Math.round(contentOffsetX / width);
     setActivePage(curretPg);

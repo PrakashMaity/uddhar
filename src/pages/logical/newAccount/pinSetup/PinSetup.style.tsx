@@ -1,9 +1,9 @@
 import { StyleSheet } from "react-native";
-import { styleConst } from "../../../../style/root.style";
+import { styleConst } from "../../../../theme/root.style";
 import {
   responsiveHeight,
   responsiveWidth,
-} from "../../../../utils/ResponsiveUI";
+} from "../../../../helper/ResponsiveUI";
 
 export const styles = StyleSheet.create({
   titleSection: {

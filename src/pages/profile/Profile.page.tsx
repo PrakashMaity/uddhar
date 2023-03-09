@@ -1,11 +1,11 @@
 import { Image, StyleSheet, Text, View } from "react-native";
 import React from "react";
-import { globalStyle } from "../../style/global.style";
+import { globalStyle } from "../../theme/global.style";
 import { styles } from "./Profile.style";
-import { responsiveHeight, responsiveWidth } from "../../utils/ResponsiveUI";
+import { responsiveHeight, responsiveWidth } from "../../helper/ResponsiveUI";
 import { images } from "../../constant/images.contant";
 import UpdateIcon from "react-native-vector-icons/Feather";
-import { styleConst } from "../../style/root.style";
+import { styleConst } from "../../theme/root.style";
 import ListIcon from "../../components/molecules/listIcon/ListIcon.molecules";
 
 const Profile = () => {
