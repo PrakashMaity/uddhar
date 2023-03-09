@@ -1,17 +1,25 @@
 import { View, Text, Pressable } from "react-native";
 import React from "react";
-import { responsiveHeight, responsiveWidth } from "../../../utils/ResponsiveUI";
+import {
+  responsiveHeight,
+  responsiveWidth,
+} from "../../../helper/ResponsiveUI";
 import AntDesign from "react-native-vector-icons/AntDesign";
 import Entypo from "react-native-vector-icons/Entypo";
-import { styleConst } from "../../../style/root.style";
+import { styleConst } from "../../../theme/root.style";
 
 interface headerInterface {
   back?: boolean;
   threeDot?: boolean;
   title?: string;
-  theme?:string;
+  theme?: string;
 }
-const SimpleHeader = ({ back, threeDot, title,theme='dark' }: headerInterface) => {
+const SimpleHeader = ({
+  back,
+  threeDot,
+  title,
+  theme = "dark",
+}: headerInterface) => {
   return (
     <View
       style={{
@@ -32,7 +40,7 @@ const SimpleHeader = ({ back, threeDot, title,theme='dark' }: headerInterface) =
         {back && (
           <AntDesign
             name="arrowleft"
-            color={theme === 'dark' ?"black":"white"}
+            color={theme === "dark" ? "black" : "white"}
             size={responsiveWidth(26)}
           />
         )}
@@ -44,7 +52,7 @@ const SimpleHeader = ({ back, threeDot, title,theme='dark' }: headerInterface) =
             style={{
               fontSize: responsiveHeight(20),
               fontFamily: styleConst.FONT_FAMILY.INTER_BOLD,
-              color:theme === 'dark' ?"black":"white"
+              color: theme === "dark" ? "black" : "white",
             }}
           >
             {title}
@@ -62,7 +70,7 @@ const SimpleHeader = ({ back, threeDot, title,theme='dark' }: headerInterface) =
         {threeDot && (
           <Entypo
             name="dots-three-horizontal"
-            color={theme === 'dark' ?"black":"white"}
+            color={theme === "dark" ? "black" : "white"}
             size={responsiveWidth(25)}
           />
         )}

@@ -4,9 +4,12 @@ import { useNavigation } from "@react-navigation/native";
 import Toast from "react-native-simple-toast";
 import { ScreenNavigationProp } from "../../../interface/Navigation.interface";
 import SimpleHeader from "../../../components/atoms/header/SimpleHeader";
-import { styleConst } from "../../../style/root.style";
+import { styleConst } from "../../../theme/root.style";
 import { styles } from "./Signup.style";
-import { responsiveHeight, responsiveWidth } from "../../../utils/ResponsiveUI";
+import {
+  responsiveHeight,
+  responsiveWidth,
+} from "../../../helper/ResponsiveUI";
 import LargeButton from "../../../components/atoms/button/LargeButton";
 import LogoWithButton from "../../../components/atoms/button/LogoWithButton";
 import { images } from "../../../constant/images.contant";
@@ -54,7 +57,7 @@ export default function Signup() {
       </View>
 
       <View style={styles.buttonGroup}>
-        <View style={{  }}>
+        <View style={{}}>
           <LargeButton
             title="Sign Up"
             onPress={() => {
@@ -80,19 +83,29 @@ export default function Signup() {
             title="Sign Up with Google"
             style={{
               marginVertical: responsiveHeight(16),
-              backgroundColor: "rgba(52,52,52,0)"
+              borderWidth: responsiveWidth(1),
+              borderColor: "black",
+              backgroundColor: "white",
             }}
             icon={images.SignUp.google}
           />
         </View>
         <Text
           style={{
-            fontSize:styleConst.FONT_SIZE.REGULAR_1,
+            fontSize: styleConst.FONT_SIZE.REGULAR_1,
             marginTop: 20,
             textAlign: "center",
           }}
         >
-          Already have an account? <Text style={{textDecorationLine:"underline",color:styleConst.COLOR.VIOLET.VIOLET_100}}>Login</Text> 
+          Already have an account?{" "}
+          <Text
+            style={{
+              textDecorationLine: "underline",
+              color: styleConst.COLOR.VIOLET.VIOLET_100,
+            }}
+          >
+            Login
+          </Text>
         </Text>
       </View>
     </View>

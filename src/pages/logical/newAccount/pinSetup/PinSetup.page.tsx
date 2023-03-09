@@ -1,7 +1,7 @@
 import { StyleSheet, Text, TextInput, View } from "react-native";
 import React from "react";
-import { globalStyle } from "../../../../style/global.style";
-import { styleConst } from "../../../../style/root.style";
+import { globalStyle } from "../../../../theme/global.style";
+import { styleConst } from "../../../../theme/root.style";
 import { styles } from "./PinSetup.style";
 
 const PinSetup = () => {
@@ -20,7 +20,7 @@ const PinSetup = () => {
       </View>
       <View style={styles.pinInputSection}>
         <View style={styles.textInputWrapperActive}>
-          <TextInput  keyboardType="phone-pad" />
+          <TextInput keyboardType="phone-pad" />
         </View>
         <View style={styles.textInputWrapperActive}>
           <TextInput keyboardType="phone-pad" />
