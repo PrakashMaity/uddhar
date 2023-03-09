@@ -15,15 +15,7 @@ interface ButtonInterface {
   buttonColor?: string;
   buttonTextColor?: string;
 }
-
-export default function LargeButton({
-  title,
-  plusIcon,
-  style,
-  onPress,
-  buttonColor,
-  buttonTextColor,
-}: ButtonInterface) {
+export default function LargeButton({ title, plusIcon, style, onPress, buttonColor, buttonTextColor }:ButtonInterface) {
   const styles = StyleSheet.create({
     customButton: {
       backgroundColor:

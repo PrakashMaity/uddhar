@@ -23,10 +23,10 @@ const SimpleHeader = ({
   return (
     <View
       style={{
-        height: responsiveHeight(60),
+        height: responsiveHeight(64),
         width: "100%",
         flexDirection: "row",
-        paddingHorizontal: responsiveWidth(12),
+        paddingHorizontal: responsiveWidth(20),
       }}
     >
       <Pressable
@@ -50,7 +50,7 @@ const SimpleHeader = ({
           <Text
             numberOfLines={1}
             style={{
-              fontSize: responsiveHeight(20),
+              fontSize: responsiveHeight(22),
               fontFamily: styleConst.FONT_FAMILY.INTER_BOLD,
               color: theme === "dark" ? "black" : "white",
             }}

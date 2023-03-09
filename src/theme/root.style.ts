@@ -50,6 +50,9 @@ export const styleConst = {
       BLUE_80: "#248AFF",
       BLUE_100: "#0077FF",
     },
+    GREY: {
+      GREY_20: "#C0C0C0"
+    }
   },
   FONT_SIZE: {
     TITLE_X: responsiveHeight(64),

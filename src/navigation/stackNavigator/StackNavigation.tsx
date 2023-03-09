@@ -42,6 +42,10 @@ export default function StackNavigation() {
         </Stack.Group>
 
         <Stack.Screen name="Home" component={Home} />
+        <Stack.Screen name="profile" component={Profile} />
+        <Stack.Screen name="addAccount" component={AddAccount} />
+        <Stack.Screen name="accountSetup" component={SetupAccount} />
+        <Stack.Screen name="pinSetup" component={PinSetup} />
       </Stack.Navigator>
     </NavigationContainer>
   );
