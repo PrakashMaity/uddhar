@@ -1,5 +1,5 @@
 import { StyleSheet } from "react-native";
-import { responsiveHeight, responsiveWidth } from "../utils/ResponsiveUI";
+import { responsiveHeight, responsiveWidth } from "../helper/ResponsiveUI";
 import { styleConst } from "./root.style";
 
 export const globalStyle = StyleSheet.create({
@@ -18,7 +18,7 @@ export const globalStyle = StyleSheet.create({
         marginTop: responsiveHeight(24),
         borderRadius: responsiveHeight(18),
         paddingHorizontal: responsiveWidth(15),
-        color: styleConst.COLOR.DARK.DARK_50,
+        color: styleConst.COLOR.DARK.LIGHT_50,
         fontSize: responsiveHeight(16),
         fontFamily:styleConst.FONT_FAMILY.INTER_SEMIBOLD
     },
@@ -38,7 +38,7 @@ export const globalStyle = StyleSheet.create({
         height: "100%",
         width: "100%",
         alignItems: "stretch",
-        color: styleConst.COLOR.DARK.DARK_50,
+        color: styleConst.COLOR.DARK. LIGHT_50,
         fontSize: responsiveHeight(16),
         fontFamily:styleConst.FONT_FAMILY.INTER_SEMIBOLD
     }

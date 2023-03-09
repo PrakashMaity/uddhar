@@ -4,7 +4,7 @@ import { Image } from 'react-native'
 import { images } from '../../../constant/images.contant'
 import { useNavigation } from '@react-navigation/native'
 import { styles } from './SplashScreen.style'
-import { styleConst } from '../../../style/root.style'
+import { styleConst } from '../../../theme/root.style'
 export default function SplashScreen() {
   const navigation:any = useNavigation()
   const greet = () => {
