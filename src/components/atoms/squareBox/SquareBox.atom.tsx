@@ -8,13 +8,31 @@ import { styleConst } from "../../../theme/root.style";
 import { images } from "../../../constant/images.contant";
 import Ionicons from "react-native-vector-icons/Ionicons";
 
-const SquareBox = () => {
+interface SquareBoxInterface {
+  icon: string;
+  theme?: string;
+}
+const SquareBox = ({ icon, theme = "normal" }: SquareBoxInterface) => {
   return (
-    <View style={styles.box}>
+    <View
+      style={[
+        styles.box,
+        {
+          backgroundColor:
+            theme == "normal"
+              ? styleConst.COLOR.VIOLET.VIOLET_20
+              : styleConst.COLOR.RED.RED_20,
+        },
+      ]}
+    >
       <Ionicons
-        name="wallet"
+        name={icon}
         size={responsiveWidth(30)}
-        color={styleConst.COLOR.VIOLET.VIOLET_100}
+        color={
+          theme == "normal"
+            ? styleConst.COLOR.VIOLET.VIOLET_100
+            : styleConst.COLOR.RED.RED_100
+        }
       />
     </View>
   );
@@ -24,10 +42,9 @@ export default SquareBox;
 
 const styles = StyleSheet.create({
   box: {
-    width: responsiveHeight(52),
+    width: responsiveWidth(52),
     height: responsiveWidth(52),
     borderRadius: responsiveWidth(16),
-    backgroundColor: styleConst.COLOR.VIOLET.VIOLET_20,
     alignItems: "center",
     justifyContent: "center",
   },

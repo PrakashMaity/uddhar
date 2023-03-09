@@ -1,12 +1,13 @@
-import { Image, StyleSheet, Text, View } from "react-native";
+import { Image, Text, View } from "react-native";
 import React from "react";
 import { globalStyle } from "../../theme/global.style";
 import { styles } from "./Profile.style";
-import { responsiveHeight, responsiveWidth } from "../../helper/ResponsiveUI";
+import { responsiveWidth } from "../../helper/ResponsiveUI";
 import { images } from "../../constant/images.contant";
 import UpdateIcon from "react-native-vector-icons/Feather";
 import { styleConst } from "../../theme/root.style";
-import ListIcon from "../../components/molecules/listIcon/ListIcon.molecules";
+import { List } from "./profileData/ListData";
+import ListIcon1 from "../../components/molecules/listIcon/ListIcon1.molecules";
 
 const Profile = () => {
   return (
@@ -16,8 +17,8 @@ const Profile = () => {
           <Image
             source={images.ADD_ACCOUNT.BANK_LOGOS.SBI}
             style={{
-              height: "100%",
-              width: "100%",
+              height: responsiveWidth(70),
+              width: responsiveWidth(70),
               resizeMode: "contain",
             }}
           />
@@ -29,16 +30,17 @@ const Profile = () => {
         <View style={styles.editSection}>
           <UpdateIcon
             name="edit-2"
-            size={responsiveWidth(30)}
+            size={responsiveWidth(25)}
             color={styleConst.COLOR.DARK.DARK_25}
           />
         </View>
       </View>
       <View style={styles.bodyList}>
-        <ListIcon />
-        <ListIcon />
-        <ListIcon />
-        <ListIcon />
+        {
+          List.map((item,index)=>(
+            <ListIcon1 key={index} content={item} bottomBorder={List.length-1 <= index ? false : true} />
+          ))
+        }
       </View>
     </View>
   );

@@ -31,7 +31,7 @@ export default function LargeButton({
           ? styleConst.COLOR.VIOLET.VIOLET_100
           : buttonColor,
       width: "100%",
-      height: responsiveHeight(60),
+      height: responsiveHeight(68),
       borderRadius: responsiveHeight(14),
       flexDirection: "row",
       justifyContent: "center",

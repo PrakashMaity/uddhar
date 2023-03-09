@@ -11,6 +11,8 @@ import SetupAccount from "../../pages/logical/newAccount/setupAccount/SetupAccou
 import AddAccount from "../../pages/logical/newAccount/addAccount/AddAccount.page";
 import Profile from "../../pages/profile/Profile.page";
 import Home from "../../pages/logical/home/Home.page";
+import Accounts from "../../pages/accounts/Accounts.page";
+import DetailsAccounts from "../../pages/details_accounts/DetailsAccounts.page";
 
 const Stack = createNativeStackNavigator<RootStackParamListInterface>();
 
@@ -22,6 +24,9 @@ export default function StackNavigation() {
           headerShown: false,
         }}
       >
+        <Stack.Screen name="detailsAccounts" component={DetailsAccounts} />
+        <Stack.Screen name="accounts" component={Accounts} />
+        <Stack.Screen name="profile" component={Profile} />
         <Stack.Group>
           <Stack.Screen name="SplashScreen" component={SplashScreen} />
           <Stack.Screen name="IntroScreen" component={IntroScreen} />
@@ -36,7 +41,6 @@ export default function StackNavigation() {
           <Stack.Screen name="addAccount" component={AddAccount} />
         </Stack.Group>
 
-        <Stack.Screen name="profile" component={Profile} />
         <Stack.Screen name="Home" component={Home} />
       </Stack.Navigator>
     </NavigationContainer>

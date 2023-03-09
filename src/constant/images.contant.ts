@@ -22,5 +22,8 @@ export const images = {
         // SETTINGS:require('../../assets/images/icon/settings.png'),
         // UPLOAD:require('../../assets/images/icon/upload.png'),
         // LOGOUT:require('../../assets/images/icon/logout.png'),
+    },
+    ACCOUNTS:{
+        HERO_BANNER:require('../../assets/images/accounts/hero.png')
     }
 };

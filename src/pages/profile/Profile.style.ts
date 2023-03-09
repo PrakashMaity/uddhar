@@ -12,11 +12,13 @@ export const styles = StyleSheet.create({
   },
   profileImageWrapper: {
     width: responsiveWidth(80),
-    height: responsiveHeight(80),
+    height: responsiveWidth(80),
     borderWidth: responsiveWidth(1.5),
     borderColor: styleConst.COLOR.VIOLET.VIOLET_100,
     borderRadius: responsiveWidth(40),
     padding: responsiveWidth(2),
+    alignItems:'center',
+    justifyContent:'center',
   },
   nameSection: {
     flex: 1,

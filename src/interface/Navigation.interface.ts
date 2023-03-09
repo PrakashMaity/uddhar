@@ -10,6 +10,8 @@ export type RootStackParamListInterface = {
     accountSetup:undefined;
     addAccount:undefined;
     profile:undefined;
+    accounts:undefined;
+    detailsAccounts:undefined;
   };
 
   export type ScreenNavigationProp = NativeStackNavigationProp<
