@@ -12,7 +12,10 @@ import Profile from "../../pages/profile/Profile.page";
 import Home from "../../pages/logical/home/Home.page";
 import Accounts from "../../pages/accounts/Accounts.page";
 import DetailsAccounts from "../../pages/details_accounts/DetailsAccounts.page";
-import Login from "../../pages/auth/login/Login.page";
+import Login from "../../pages/auth/logIn/Login.page";
+import EmptyBudget from "../../pages/budget/emptyBudget/EmptyBudget.page";
+import CreateBudget from "../../pages/budget/createBudget/CreateBudget.page";
+import Budget from "../../pages/budget/Budget.page";
 
 const Stack = createNativeStackNavigator<RootStackParamListInterface>();
 
@@ -25,12 +28,15 @@ export default function StackNavigation() {
         }}
       >
         <Stack.Group>
-          <Stack.Screen name="Login" component={Login} />
-          <Stack.Screen name="Signup" component={Signup} />
+          <Stack.Screen name="Budget" component={Budget} />
+          <Stack.Screen name="createBudget" component={CreateBudget} />
+          <Stack.Screen name="emptyBudget" component={EmptyBudget} />
         </Stack.Group>
-        <Stack.Screen name="profile" component={Profile} />
-        <Stack.Screen name="detailsAccounts" component={DetailsAccounts} />
-        <Stack.Screen name="accounts" component={Accounts} />
+        <Stack.Group>
+          <Stack.Screen name="detailsAccounts" component={DetailsAccounts} />
+          <Stack.Screen name="profile" component={Profile} />
+          <Stack.Screen name="accounts" component={Accounts} />
+        </Stack.Group>
 
         <Stack.Group>
           <Stack.Screen name="SplashScreen" component={SplashScreen} />
@@ -38,11 +44,15 @@ export default function StackNavigation() {
         </Stack.Group>
 
         <Stack.Group>
+          <Stack.Screen name="Login" component={Login} />
+          <Stack.Screen name="Signup" component={Signup} />
+        </Stack.Group>
+
+        <Stack.Group>
           <Stack.Screen name="pinSetup" component={PinSetup} />
           <Stack.Screen name="accountSetup" component={SetupAccount} />
           <Stack.Screen name="addAccount" component={AddAccount} />
         </Stack.Group>
-
         <Stack.Screen name="Home" component={Home} />
       </Stack.Navigator>
     </NavigationContainer>

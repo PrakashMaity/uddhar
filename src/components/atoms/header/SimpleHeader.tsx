@@ -7,6 +7,8 @@ import {
 import AntDesign from "react-native-vector-icons/AntDesign";
 import Entypo from "react-native-vector-icons/Entypo";
 import { styleConst } from "../../../theme/root.style";
+import { useNavigation } from "@react-navigation/native";
+import { ScreenNavigationProp } from "../../../interface/Navigation.interface";
 
 interface headerInterface {
   back?: boolean;
@@ -20,6 +22,7 @@ const SimpleHeader = ({
   title,
   theme = "dark",
 }: headerInterface) => {
+  const navigation = useNavigation<ScreenNavigationProp>();
   return (
     <View
       style={{
@@ -30,6 +33,9 @@ const SimpleHeader = ({
       }}
     >
       <Pressable
+        onPress={() => {
+          navigation.goBack();
+        }}
         style={{
           height: "100%",
           width: responsiveWidth(35),

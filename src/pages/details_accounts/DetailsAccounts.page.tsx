@@ -9,54 +9,62 @@ import LargeButton from "../../components/atoms/button/LargeButton";
 import { List } from "./detailsAccountData/ListData";
 import SquareBox from "../../components/atoms/squareBox/SquareBox.atom";
 import ListIcon2 from "../../components/molecules/listIcon/ListIcon2.molecules";
+import { responsiveHeight } from "../../helper/ResponsiveUI";
 
 const DetailsAccounts = () => {
   return (
     <Fragment>
-      <SimpleHeader back title={"Account"} />
+      <SimpleHeader back title={"Detail account"} />
       <View style={styles.heroSection}>
         <SquareBox icon={"wallet"} />
         <Text style={styles.title}>Paypal</Text>
         <Text style={styles.price}>$2400</Text>
       </View>
-      <View style={globalStyle.mainContainer}>
-        <Text style={styles.dateText}>Today</Text>
-        <View style={styles.listContainer}>
-          <ListIcon2
-            content={{
-              title: "Wallet",
-              icon: "wallet",
-              route: "",
-              theme: "normal",
-            }}
-          />
-           <ListIcon2
-            content={{
-              title: "Wallet",
-              icon: "wallet",
-              route: "",
-              theme: "normal",
-            }}
-          />
-           <ListIcon2
-            content={{
-              title: "Wallet",
-              icon: "wallet",
-              route: "",
-              theme: "normal",
-            }}
-          />
+      <View style={[globalStyle.mainContainer, { gap: responsiveHeight(13) }]}>
+        <View style={styles.dateListContainer}>
+          <Text style={styles.dateText}>Today</Text>
+          <View style={styles.listContainer}>
+            <ListIcon2
+              content={{
+                title: "Wallet",
+                icon: "wallet",
+                route: "",
+                theme: "YELLOW",
+              }}
+              credit={true}
+            />
+            <ListIcon2
+              content={{
+                title: "Wallet",
+                icon: "wallet",
+                route: "",
+                theme: "VIOLET",
+              }}
+            />
+            <ListIcon2
+              content={{
+                title: "Wallet",
+                icon: "wallet",
+                route: "",
+                theme: "RED",
+              }}
+            />
+          </View>
         </View>
-        {/* <View style={styles.listSection}>
-        {
-          List.map((item,index)=>(
-            <ListIcon1 key={index} content={item} bottomBorder={List.length-1 <= index ? false : true} />
-          ))
-        }
+        <View style={styles.dateListContainer}>
+          <Text style={styles.dateText}>Yesterday</Text>
+          <View style={styles.listContainer}>
+            <ListIcon2
+              content={{
+                title: "Wallet",
+                icon: "wallet",
+                route: "",
+                theme: "YELLOW",
+              }}
+              credit={true}
+            />
+          </View>
         </View>
-        <View style={styles.buttonWrapper}>
-          <LargeButton title="+ Add new wallet" onPress={() => {}} />
-        </View> */}
       </View>
     </Fragment>
   );

@@ -15,23 +15,52 @@ interface ListIconInterface {
     theme: string;
     price?: string;
   };
+  credit?: boolean;
   bottomBorder?: boolean;
 }
-const ListIcon2 = ({ content, bottomBorder = true }: ListIconInterface) => {
+const ListIcon2 = ({ content, credit }: ListIconInterface) => {
   return (
-    <View
-      style={[
-        styles.listBox,
-      ]}
-    >
+    <View style={[styles.listBox]}>
       <SquareBox icon={content.icon} theme={content.theme} />
       <View style={styles.middleSection}>
-        <Text style={[styles.listTitle, { fontFamily: styleConst.FONT_FAMILY.INTER_SEMIBOLD }]}>{content.title}</Text>
-        <Text style={[styles.listTitle, { fontFamily: styleConst.FONT_FAMILY.PRIMARY }]}>Buy some grocery</Text>
+        <Text
+          style={[
+            styles.listTitle,
+            { fontFamily: styleConst.FONT_FAMILY.INTER_SEMIBOLD },
+          ]}
+        >
+          {content.title}
+        </Text>
+        <Text
+          style={[
+            styles.listTitle,
+            { fontFamily: styleConst.FONT_FAMILY.PRIMARY },
+          ]}
+        >
+          Buy some grocery
+        </Text>
       </View>
       <View style={styles.rightSection}>
-        <Text style={[styles.listTitleRight, { color: styleConst.COLOR.RED.RED_100 }]}>- $120</Text>
-        <Text style={[styles.listTime, { fontFamily: styleConst.FONT_FAMILY.PRIMARY }]}>10:00 AM</Text>
+        <Text
+          style={[
+            styles.listTitleRight,
+            {
+              color: credit
+                ? styleConst.COLOR.GREEN.GREEN_100
+                : styleConst.COLOR.RED.RED_100,
+            },
+          ]}
+        >
+          - $120
+        </Text>
+        <Text
+          style={[
+            styles.listTime,
+            { fontFamily: styleConst.FONT_FAMILY.PRIMARY },
+          ]}
+        >
+          10:00 AM
+        </Text>
       </View>
     </View>
   );
@@ -46,20 +75,17 @@ const styles = StyleSheet.create({
     gap: responsiveWidth(10),
     padding: responsiveWidth(12),
     backgroundColor: "#FCFCFC",
-    borderRadius: responsiveWidth(15)
+    borderRadius: responsiveWidth(15),
   },
   listTitle: {
     fontSize: styleConst.FONT_SIZE.REGULAR_1,
     color: styleConst.COLOR.DARK.DARK_25,
-
   },
   middleSection: {
     flex: 1,
-    gap: responsiveHeight(10)
+    gap: responsiveHeight(5),
   },
-  rightSection: {
-
-  },
+  rightSection: {},
   listTitleRight: {
     fontSize: styleConst.FONT_SIZE.REGULAR_1,
     color: styleConst.COLOR.DARK.DARK_25,
@@ -67,6 +93,5 @@ const styles = StyleSheet.create({
   },
   listTime: {
     fontSize: styleConst.FONT_SIZE.SMALL,
-
-  }
+  },
 });

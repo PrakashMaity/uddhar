@@ -34,8 +34,7 @@ export default function Login() {
     <View style={styles.mainContainer}>
       <SimpleHeader back title="Login" />
 
-      <View style={{ flex: 1, marginHorizontal: responsiveWidth(20) }} >
-
+      <View style={{ flex: 1, marginHorizontal: responsiveWidth(20) }}>
         <View style={styles.inputGroup}>
           <TextInput
             value={email}
@@ -46,7 +45,7 @@ export default function Login() {
             style={globalStyle.textInputBox}
           />
           <View style={globalStyle.textInputBoxWithIcon}>
-            <View style={{ flex: 1 }} >
+            <View style={{ flex: 1 }}>
               <TextInput
                 value={password}
                 secureTextEntry
@@ -56,7 +55,15 @@ export default function Login() {
                 style={globalStyle.textInputOnlyText}
               />
             </View>
-            <Pressable style={{ paddingHorizontal: responsiveWidth(1), justifyContent: "center" }} >
+            <Pressable
+              onPress={() => {
+                onSignUpHandler();
+              }}
+              style={{
+                paddingHorizontal: responsiveWidth(1),
+                justifyContent: "center",
+              }}
+            >
               <Ionicons
                 name="eye-outline"
                 // ios-eye-off-outline
@@ -67,18 +74,12 @@ export default function Login() {
           </View>
         </View>
 
-        {/* <View style={{ flexDirection: "row", marginTop: responsiveHeight(30), alignItems: "center" }} >
-          <View style={{ height: responsiveHeight(24), width: responsiveHeight(24), borderWidth: responsiveHeight(2.5), borderColor: styleConst.COLOR.VIOLET.VIOLET_100, borderRadius: responsiveHeight(5) }} ></View>
-          <Text style={{ marginLeft: responsiveWidth(14), fontSize: responsiveHeight(17), lineHeight:responsiveHeight(23), width: "90%", fontFamily: styleConst.FONT_FAMILY.INTER_SEMIBOLD, color: styleConst.COLOR.DARK.LIGHT_50 }} >By signing up, you agree to the <Text style={{ color: styleConst.COLOR.VIOLET.VIOLET_100 }} >Terms of Service and Privacy Policy</Text></Text>
-        </View> */}
-
-
         <View style={styles.buttonGroup}>
           <View style={{}}>
             <LargeButton
               title="Login"
               onPress={() => {
-                // navigation.navigate("Signup");
+                navigation.navigate("Home");
               }}
             />
           </View>
@@ -88,7 +89,7 @@ export default function Login() {
               fontFamily: styleConst.FONT_FAMILY.INTER_SEMIBOLD,
               marginTop: 20,
               textAlign: "center",
-              color: styleConst.COLOR.VIOLET.VIOLET_100
+              color: styleConst.COLOR.VIOLET.VIOLET_100,
             }}
           >
             Forgot password?
@@ -99,10 +100,19 @@ export default function Login() {
               fontFamily: styleConst.FONT_FAMILY.INTER_SEMIBOLD,
               marginTop: 20,
               textAlign: "center",
-              color: styleConst.COLOR.DARK.LIGHT_50
+              color: styleConst.COLOR.DARK.LIGHT_50,
             }}
           >
-            Don’t have an account yet? <Text onPress={() => navigation.navigate("Signup")} style={{ textDecorationLine: "underline", color: styleConst.COLOR.VIOLET.VIOLET_100 }}>Sign Up</Text>
+            Don’t have an account yet?{" "}
+            <Text
+              onPress={() => navigation.navigate("Signup")}
+              style={{
+                textDecorationLine: "underline",
+                color: styleConst.COLOR.VIOLET.VIOLET_100,
+              }}
+            >
+              Sign Up
+            </Text>
           </Text>
         </View>
       </View>

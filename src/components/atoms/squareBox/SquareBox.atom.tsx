@@ -7,6 +7,7 @@ import {
 import { styleConst } from "../../../theme/root.style";
 import { images } from "../../../constant/images.contant";
 import Ionicons from "react-native-vector-icons/Ionicons";
+import { boxThemeChanger } from "../../../helper/utils/ColorTheme";
 
 interface SquareBoxInterface {
   icon: string;
@@ -18,21 +19,14 @@ const SquareBox = ({ icon, theme = "normal" }: SquareBoxInterface) => {
       style={[
         styles.box,
         {
-          backgroundColor:
-            theme == "normal"
-              ? styleConst.COLOR.VIOLET.VIOLET_20
-              : styleConst.COLOR.RED.RED_20,
+          backgroundColor: boxThemeChanger(theme).boxColor,
         },
       ]}
     >
       <Ionicons
         name={icon}
         size={responsiveWidth(30)}
-        color={
-          theme == "normal"
-            ? styleConst.COLOR.VIOLET.VIOLET_100
-            : styleConst.COLOR.RED.RED_100
-        }
+        color={boxThemeChanger(theme).iconColor}
       />
     </View>
   );
