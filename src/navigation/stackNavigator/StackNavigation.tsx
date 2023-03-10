@@ -12,12 +12,12 @@ import Profile from "../../pages/profile/Profile.page";
 import Home from "../../pages/logical/home/Home.page";
 import Accounts from "../../pages/accounts/Accounts.page";
 import DetailsAccounts from "../../pages/details_accounts/DetailsAccounts.page";
-import Login from "../../pages/auth/logIn/Login.page";
 import EmptyBudget from "../../pages/budget/emptyBudget/EmptyBudget.page";
 import CreateBudget from "../../pages/budget/createBudget/CreateBudget.page";
 import Budget from "../../pages/budget/Budget.page";
 import DetailsBudget from "../../pages/budget/DetailsBudget/DetailsBudget.page";
 import DetailsTransaction from "../../pages/detailsTransaction/DetailsTransaction.page";
+import Login from "../../pages/auth/login/Login.page";
 
 const Stack = createNativeStackNavigator<RootStackParamListInterface>();
 
@@ -29,8 +29,9 @@ export default function StackNavigation() {
           headerShown: false,
         }}
       >
+        <Stack.Screen name="Home" component={Home} />
         <Stack.Group>
-        <Stack.Screen name="detailsTransaction" component={DetailsTransaction} />
+          <Stack.Screen name="detailsTransaction" component={DetailsTransaction} />
           <Stack.Screen name="detailsBudget" component={DetailsBudget} />
           <Stack.Screen name="Budget" component={Budget} />
           <Stack.Screen name="createBudget" component={CreateBudget} />
@@ -57,7 +58,6 @@ export default function StackNavigation() {
           <Stack.Screen name="accountSetup" component={SetupAccount} />
           <Stack.Screen name="addAccount" component={AddAccount} />
         </Stack.Group>
-        <Stack.Screen name="Home" component={Home} />
       </Stack.Navigator>
     </NavigationContainer>
   );
