@@ -25,5 +25,8 @@ export const images = {
     },
     ACCOUNTS:{
         HERO_BANNER:require('../../assets/images/accounts/hero.png')
+    },
+    DETAIL_TRANSACTION:{
+        CAPTURE_IMAGE:require('../../assets/images/detailsTransacion/captureImage.png')
     }
 };
