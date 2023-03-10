@@ -23,16 +23,45 @@ export const styles = StyleSheet.create({
   },
   rightSection: {},
   bodySection: {
-    backgroundColor: "white",
+    backgroundColor: styleConst.COLOR.LIGHT.LIGHT_80,
     borderTopLeftRadius: responsiveWidth(15),
     borderTopRightRadius: responsiveWidth(15),
   },
   topSection: {
     flex: 1,
     alignItems: "center",
-    justifyContent: "center",
+    // justifyContent: "center",
+    marginVertical: responsiveHeight(16),
   },
   buttonWrapper: {
     marginBottom: responsiveHeight(10),
   },
+  progressBox: {
+    backgroundColor: "#FFFFFF",
+    width: "100%",
+    padding: responsiveWidth(15),
+    borderRadius: responsiveWidth(10),
+  },
+  progressBoxHead: {
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "space-between",
+  },
+  progressBoxBody: { gap: responsiveWidth(5) },
+  chips: {
+    width: responsiveWidth(109),
+    flexDirection: "row",
+    justifyContent: "center",
+    alignItems: "center",
+    padding: responsiveWidth(5),
+    backgroundColor: styleConst.COLOR.LIGHT.LIGHT_60,
+    gap: responsiveWidth(5),
+    borderRadius: responsiveWidth(10),
+  },
+  dot: {
+    width: responsiveWidth(16),
+    height: responsiveWidth(16),
+    borderRadius: responsiveWidth(8),
+  },
+  alertWrapper: {},
 });

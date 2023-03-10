@@ -22,6 +22,7 @@
     "react-native-element-dropdown": "^2.8.0",
     "react-native-fs": "^2.20.0",
     "react-native-get-random-values": "^1.8.0",
+    "react-native-progress": "^5.0.0",
     "react-native-safe-area-context": "^3.3.2",
     "react-native-screens": "^3.20.0",
     "react-native-simple-toast": "^2.0.0",
