@@ -17,6 +17,7 @@ export type RootStackParamListInterface = {
   Budget: undefined;
   detailsBudget: undefined;
   detailsTransaction:undefined;
+  transaction:undefined;
 };
 
 export type ScreenNavigationProp =
