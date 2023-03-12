@@ -87,7 +87,7 @@ export default function MonthSelectionHeader({ filteronPress }: {
                         color={styleConst.COLOR.VIOLET.VIOLET_100}
                         size={responsiveWidth(26)}
                     />
-                    <Text style={{ fontSize: responsiveHeight(17), fontFamily: styleConst.FONT_FAMILY.INTER_SEMIBOLD, color: styleConst.COLOR.DARK.LIGHT_75 }} >{selectedMonth.name}</Text>
+                    <Text style={{ fontSize: responsiveHeight(17), fontFamily: styleConst.FONT_FAMILY.INTER_SEMIBOLD, color: styleConst.COLOR.DARK.DARK_75 }} >{selectedMonth.name}</Text>
                 </TouchableOpacity>
             </View>
             <Pressable
@@ -96,7 +96,7 @@ export default function MonthSelectionHeader({ filteronPress }: {
             style={{ height: responsiveHeight(58), padding: responsiveWidth(10), borderWidth: responsiveHeight(1.5), borderColor: styleConst.COLOR.GREY.GREY_20, borderRadius: responsiveHeight(15), justifyContent: "center", alignItems: "center" }} >
                 <Octicons
                     name="filter"
-                    color={styleConst.COLOR.DARK.LIGHT_75}
+                    color={styleConst.COLOR.DARK.DARK_75}
                     size={responsiveWidth(24)}
                 />
             </Pressable>

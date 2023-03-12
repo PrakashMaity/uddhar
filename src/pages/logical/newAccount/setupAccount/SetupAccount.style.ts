@@ -11,7 +11,7 @@ export const styles = StyleSheet.create({
   },
   title: {
     fontSize: styleConst.FONT_SIZE.TITLE_1,
-    color: styleConst.COLOR.DARK.LIGHT_50,
+    color: styleConst.COLOR.DARK.DARK_50,
   },
   descriptionWrapper: {
     marginTop: responsiveWidth(37),

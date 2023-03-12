@@ -29,7 +29,7 @@ export const styles = StyleSheet.create({
   },
   Title: {
     fontSize: styleConst.FONT_SIZE.TITLE_2,
-    color: styleConst.COLOR.DARK.LIGHT_75,
+    color: styleConst.COLOR.DARK.DARK_75,
   },
   editSection: {
     justifyContent: "center",

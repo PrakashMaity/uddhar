@@ -11,9 +11,9 @@ export const styleConst = {
     },
     DARK: {
       DARK_25: "#292B2D",
-      LIGHT_50: "#464A4D",
-      LIGHT_75: "#161719",
-      LIGHT_100: "#0D0E0F",
+      DARK_50: "#464A4D",
+      DARK_75: "#161719",
+      DARK_100: "#0D0E0F",
     },
     VIOLET: {
       VIOLET_20: "#EEE5FF",

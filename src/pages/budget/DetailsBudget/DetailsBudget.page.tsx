@@ -20,7 +20,7 @@ const DetailsBudget = () => {
             <SquareBox icon={"settings"} theme={"YELLOW"} />
             <Text
               style={{
-                color: styleConst.COLOR.DARK.LIGHT_75,
+                color: styleConst.COLOR.DARK.DARK_75,
                 fontFamily: styleConst.FONT_FAMILY.INTER_SEMIBOLD,
               }}
             >
@@ -33,7 +33,7 @@ const DetailsBudget = () => {
                 style={{
                   fontSize: styleConst.FONT_SIZE.TITLE_2,
                   fontFamily: styleConst.FONT_FAMILY.INTER_SEMIBOLD,
-                  color: styleConst.COLOR.DARK.LIGHT_75,
+                  color: styleConst.COLOR.DARK.DARK_75,
                 }}
               >
                 Remaining
@@ -42,7 +42,7 @@ const DetailsBudget = () => {
                 style={{
                   fontSize: styleConst.FONT_SIZE.TITLE_X,
                   fontFamily: styleConst.FONT_FAMILY.INTER_SEMIBOLD,
-                  color: styleConst.COLOR.DARK.LIGHT_75,
+                  color: styleConst.COLOR.DARK.DARK_75,
                 }}
               >
                 $0

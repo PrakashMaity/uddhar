@@ -18,7 +18,7 @@ export const globalStyle = StyleSheet.create({
         marginTop: responsiveHeight(24),
         borderRadius: responsiveHeight(18),
         paddingHorizontal: responsiveWidth(15),
-        color: styleConst.COLOR.DARK.LIGHT_50,
+        color: styleConst.COLOR.DARK.DARK_50,
         fontSize: responsiveHeight(16),
         fontFamily:styleConst.FONT_FAMILY.INTER_SEMIBOLD
     },

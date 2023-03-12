@@ -55,6 +55,6 @@ const styles = StyleSheet.create({
   listPrice:{
     fontSize: styleConst.FONT_SIZE.TITLE_3,
     fontFamily:styleConst.FONT_FAMILY.INTER_SEMIBOLD,
-    color:styleConst.COLOR.DARK.LIGHT_75
+    color:styleConst.COLOR.DARK.DARK_75
   }
 });

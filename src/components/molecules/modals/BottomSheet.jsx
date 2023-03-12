@@ -8,7 +8,7 @@ export default function BottomSheet({ isPress, onPress, children }) {
   return (
     <Modal transparent animationType="none" visible={isPress} onRequestClose={onPress}>
       <View style={{ flex: 1, backgroundColor: "rgba(52,52,52,0.5)" }}>
-        <View style={{ flex: 1 }}></View>
+        <View style={{ flex: 1 }}  ></View>
 
         <View
           style={{

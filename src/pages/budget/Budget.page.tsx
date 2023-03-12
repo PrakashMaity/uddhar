@@ -36,7 +36,7 @@ const Budget = () => {
                 />
                 <Text
                   style={{
-                    color: styleConst.COLOR.DARK.LIGHT_75,
+                    color: styleConst.COLOR.DARK.DARK_75,
                     fontFamily: styleConst.FONT_FAMILY.INTER_SEMIBOLD,
                   }}
                 >
@@ -56,7 +56,7 @@ const Budget = () => {
                 style={{
                   fontSize: styleConst.FONT_SIZE.TITLE_2,
                   fontFamily: styleConst.FONT_FAMILY.INTER_SEMIBOLD,
-                  color: styleConst.COLOR.DARK.LIGHT_75,
+                  color: styleConst.COLOR.DARK.DARK_75,
                 }}
               >
                 Remaining $0

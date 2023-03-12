@@ -10,7 +10,7 @@ export const styles = StyleSheet.create({
   },
   title: {
     fontSize: styleConst.FONT_SIZE.TITLE_2,
-    color: styleConst.COLOR.DARK.LIGHT_100,
+    color: styleConst.COLOR.DARK.DARK_100,
     fontFamily: styleConst.FONT_FAMILY.INTER_SEMIBOLD,
   },
   listContainer: {
@@ -21,11 +21,11 @@ export const styles = StyleSheet.create({
     fontSize: styleConst.FONT_SIZE.TITLE_3,
     fontFamily: styleConst.FONT_FAMILY.INTER_BOLD,
     marginBottom: responsiveHeight(13),
-    color: styleConst.COLOR.DARK.LIGHT_100,
+    color: styleConst.COLOR.DARK.DARK_100,
   },
   price: {
     fontSize: styleConst.FONT_SIZE.TITLE_1,
-    color: styleConst.COLOR.DARK.LIGHT_100,
+    color: styleConst.COLOR.DARK.DARK_100,
     fontFamily: styleConst.FONT_FAMILY.INTER_BOLD,
   },
   listSection: {

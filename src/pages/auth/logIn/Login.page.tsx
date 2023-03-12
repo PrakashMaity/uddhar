@@ -100,7 +100,7 @@ export default function Login() {
               fontFamily: styleConst.FONT_FAMILY.INTER_SEMIBOLD,
               marginTop: 20,
               textAlign: "center",
-              color: styleConst.COLOR.DARK.LIGHT_50,
+              color: styleConst.COLOR.DARK.DARK_50,
             }}
           >
             Don’t have an account yet?{" "}
