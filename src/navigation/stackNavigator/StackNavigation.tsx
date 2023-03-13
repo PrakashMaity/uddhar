@@ -30,13 +30,15 @@ export default function StackNavigation() {
           headerShown: false,
         }}
       >
+        <Stack.Group>
+          <Stack.Screen name="transaction" component={Transaction} />
+        </Stack.Group>
         <Stack.Screen name="Home" component={Home} />
         <Stack.Group>
-        <Stack.Screen name="transaction" component={Transaction} />
-
-        </Stack.Group>
-        <Stack.Group>
-        <Stack.Screen name="detailsTransaction" component={DetailsTransaction} />
+          <Stack.Screen
+            name="detailsTransaction"
+            component={DetailsTransaction}
+          />
           <Stack.Screen name="detailsBudget" component={DetailsBudget} />
           <Stack.Screen name="Budget" component={Budget} />
           <Stack.Screen name="createBudget" component={CreateBudget} />
