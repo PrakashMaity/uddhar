@@ -19,6 +19,7 @@ import DetailsBudget from "../../pages/budget/DetailsBudget/DetailsBudget.page";
 import DetailsTransaction from "../../pages/detailsTransaction/DetailsTransaction.page";
 import Transaction from "../../pages/transaction/Transaction.page";
 import Login from "../../pages/auth/logIn/Login.page";
+import FinancialReport from "../../pages/financialReport/FinancialReport.page";
 
 const Stack = createNativeStackNavigator<RootStackParamListInterface>();
 
@@ -31,6 +32,7 @@ export default function StackNavigation() {
         }}
       >
         <Stack.Group>
+          <Stack.Screen name="financialReport" component={FinancialReport} />
           <Stack.Screen name="transaction" component={Transaction} />
         </Stack.Group>
         <Stack.Screen name="Home" component={Home} />
