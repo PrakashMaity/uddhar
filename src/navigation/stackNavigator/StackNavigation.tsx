@@ -18,8 +18,8 @@ import Budget from "../../pages/budget/Budget.page";
 import DetailsBudget from "../../pages/budget/DetailsBudget/DetailsBudget.page";
 import DetailsTransaction from "../../pages/detailsTransaction/DetailsTransaction.page";
 import Transaction from "../../pages/transaction/Transaction.page";
-import Login from "../../pages/auth/logIn/Login.page";
 import FinancialReport from "../../pages/financialReport/FinancialReport.page";
+import Login from "../../pages/auth/login/Login.page";
 
 const Stack = createNativeStackNavigator<RootStackParamListInterface>();
 
