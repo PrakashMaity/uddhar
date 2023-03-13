@@ -177,8 +177,6 @@ const FinancialReport = () => {
       </View>
       </ScrollView>
     </View>
-    
-    
   );
 };
 
