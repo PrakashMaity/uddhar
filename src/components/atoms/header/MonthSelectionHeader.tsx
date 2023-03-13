@@ -18,7 +18,7 @@ export default function MonthSelectionHeader({
     id: 1,
     name: "January",
   });
-  const onpressMonthModal = () =>
+  const onPressModal = () =>
     setIsMonthModal((isMonthModal) => !isMonthModal);
 
   const months = [
@@ -82,7 +82,7 @@ export default function MonthSelectionHeader({
     >
       <View style={{ flex: 1 }}>
         <TouchableOpacity
-          onPress={onpressMonthModal}
+          onPress={onPressModal}
           activeOpacity={0.5}
           style={{
             height: responsiveHeight(58),
@@ -134,11 +134,11 @@ export default function MonthSelectionHeader({
       <Modal
         animationType="none"
         visible={isMonthModal}
-        onRequestClose={onpressMonthModal}
+        onRequestClose={onPressModal}
         transparent
       >
         <Pressable
-          onPress={onpressMonthModal}
+          onPress={onPressModal}
           style={{
             flex: 1,
             paddingHorizontal: responsiveWidth(20),
@@ -159,7 +159,7 @@ export default function MonthSelectionHeader({
                 <Text
                   onPress={() => {
                     setSelectedMonth(item);
-                    onpressMonthModal();
+                    onPressModal();
                   }}
                   key={index}
                   style={{

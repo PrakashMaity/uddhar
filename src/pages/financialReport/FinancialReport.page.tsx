@@ -1,7 +1,6 @@
-import { Dimensions, StyleSheet, Text, View } from "react-native";
+import { Dimensions, ScrollView, StyleSheet, Text, View } from "react-native";
 import React, { useState } from "react";
 import { globalStyle } from "../../theme/global.style";
-import { LineChart, PieChart } from "react-native-chart-kit";
 import { responsiveHeight, responsiveWidth } from "../../helper/ResponsiveUI";
 import { styleConst } from "../../theme/root.style";
 import SimpleHeader from "../../components/atoms/header/SimpleHeader";
@@ -9,6 +8,7 @@ import ChipIcon from "../../components/atoms/chipIcon/ChipIcon.atom";
 import AntDesign from "react-native-vector-icons/AntDesign";
 import MonthSelectionHeader from "../../components/atoms/header/MonthSelectionHeader";
 import ListIcon2 from "../../components/molecules/listIcon/ListIcon2.molecules";
+import PieChart from "react-native-pie-chart";
 const data = [
   {
     name: "Seoul",
@@ -51,9 +51,15 @@ const FinancialReport = () => {
   const [isFilterModal, setIsFilterModal] = useState(false);
   const onpressFilterButton = () =>
     setIsFilterModal((isFilterModal) => !isFilterModal);
+
+    const widthAndHeight = 250
+    const series = [123, 321, 123, 789, 537]
+    const sliceColor = ['#F44336','#2196F3','#FFEB3B', '#4CAF50', '#FF9800']
   return (
-    <View style={[globalStyle.mainContainer, { backgroundColor: "white" }]}>
+    
+<View style={[globalStyle.mainContainer, { backgroundColor: "white" }]}>
       <SimpleHeader back title="Financial Report" />
+      <ScrollView style={{flex:1}} showsVerticalScrollIndicator={false} >
       <View style={styles.chartHeader}>
         <ChipIcon title="Month" isActive={false} />
         <View style={styles.graphToggleWrapper}>
@@ -74,7 +80,7 @@ const FinancialReport = () => {
         </View>
       </View>
       <View style={styles.chartWrapper}>
-        <LineChart
+        {/* <LineChart
           data={{
             labels: ["January", "February", "March", "April", "May", "June"],
             datasets: [
@@ -116,7 +122,15 @@ const FinancialReport = () => {
             marginVertical: 8,
             borderRadius: 16,
           }}
-        />
+        /> */}
+        <PieChart
+            widthAndHeight={widthAndHeight}
+            series={series}
+            sliceColor={sliceColor}
+            doughnut={true}
+            coverRadius={0.45}
+            coverFill={'#FFF'}
+          />
       </View>
       <View style={styles.financeWrapper}>
         <View
@@ -161,7 +175,10 @@ const FinancialReport = () => {
           }}
         />
       </View>
+      </ScrollView>
     </View>
+    
+    
   );
 };
 
@@ -170,6 +187,8 @@ export default FinancialReport;
 const styles = StyleSheet.create({
   chartWrapper: {
     width: "100%",
+    justifyContent:'center',
+    alignItems:'center'
   },
   chartHeader: {
     flexDirection: "row",
