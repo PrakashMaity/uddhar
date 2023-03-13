@@ -16,7 +16,6 @@ const Home = () => {
 
   return (
     <View style={styles.main}>
-      {/* <SimpleHeader back threeDot title={"Header"} /> */}
       <MonthSelectionHeader
         filteronPress={onpressFilterButton}
       />

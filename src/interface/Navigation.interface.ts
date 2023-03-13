@@ -16,7 +16,9 @@ export type RootStackParamListInterface = {
   createBudget: undefined;
   Budget: undefined;
   detailsBudget: undefined;
-  detailsTransaction:undefined;
+  detailsTransaction: undefined;
+  transaction: undefined;
+  financialReport: undefined;
 };
 
 export type ScreenNavigationProp =

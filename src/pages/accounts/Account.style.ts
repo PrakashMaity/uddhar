@@ -13,7 +13,7 @@ fontSize:styleConst.FONT_SIZE.REGULAR_1
     },
     price:{
         fontSize:styleConst.FONT_SIZE.TITLE_X,
-        color:styleConst.COLOR.DARK.LIGHT_100,
+        color:styleConst.COLOR.DARK.DARK_100,
         fontFamily:styleConst.FONT_FAMILY.INTER_SEMIBOLD
     },
     listSection:{

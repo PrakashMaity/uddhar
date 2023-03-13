@@ -58,11 +58,11 @@ alignItems:'center'
     },
     boxKey:{
         fontSize: styleConst.FONT_SIZE.SMALL,
-        color: styleConst.COLOR.DARK.LIGHT_50
+        color: styleConst.COLOR.DARK.DARK_50
     },
     boxValue:{
         fontSize: styleConst.FONT_SIZE.REGULAR_1,
-        color: styleConst.COLOR.DARK.LIGHT_100,
+        color: styleConst.COLOR.DARK.DARK_100,
         fontFamily: styleConst.FONT_FAMILY.INTER_SEMIBOLD
     },
     bodySection:{
@@ -77,7 +77,7 @@ alignItems:'center'
 
     },
     descriptionText:{
-color:styleConst.COLOR.DARK.LIGHT_100,
+color:styleConst.COLOR.DARK.DARK_100,
 fontSize:styleConst.FONT_SIZE.REGULAR_1,
 fontFamily:styleConst.FONT_FAMILY.INTER_SEMIBOLD
     },
